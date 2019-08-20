@@ -1,42 +1,64 @@
 *,
 *::before,
 *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 @font-face {
-    font-family: PopLight;
-    src: url("./fonts/Poppins-Light.ttf");
+    font-family: PoppinsLight;
+    src: url(./fonts/Poppins-Light.ttf);
 }
 
 @font-face {
-    font-family: PopRegular;
-    src: url("./fonts/Poppins-Regular.ttf");
+    font-family: PoppinsMedium;
+    src: url(./fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(./fonts/Poppins-Regular.ttf);
 }
 
 body {
-    font-family: PopLight;
+    font-family: PoppinsLight;
 }
 
-.portofolio {
-    color: white;
-    background: radial-gradient(rgba(43, 55, 96, 1), rgba(11, 16, 35, 1));
+.portfolio {
+    overflow: hidden;
+    background: radial-gradient(1267.00px at 50% -4.31%, #001C27 0%, #414141 100%);
 }
+
+.portfolio-header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    color: black;
+}
+
+
 
 nav {
-    min-height: 10vh;
+    height: 10vh;
     width: 90%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
+    color: white;
+
 }
+
 
 .logo {
     font-size: 20px;
+
+}
+
+section {
+    color: white;
 }
 
 .page {
@@ -58,9 +80,9 @@ nav {
 .hero {
     overflow: hidden;
     height: 500px;
-    align-self: center;
     justify-self: center;
     display: flex;
+    margin-top: 100px;
 }
 
 .hero img {
@@ -74,29 +96,31 @@ nav {
 }
 
 .model-right {
-    transform: translate(0%, 10%);
-}
-
-.model-left {
-    transform: translate(0%, -10%);
+    transform: translate(0%, 5%);
 }
 
 .hero:hover .model-right {
     transform: translate(0%, 0%);
 }
 
+.model-left {
+    transform: translate(0%, -5%);
+}
+
 .hero:hover .model-left {
     transform: translate(0%, 0%);
 }
 
+
 .details {
     grid-column: 2/3;
     align-self: end;
+    margin-bottom: 100px;
 }
 
 .details h1 {
     font-size: 64px;
-    font-family: PopRegular;
+    font-family: PoppinsRegular;
 }
 
 .details h2 {
@@ -114,12 +138,13 @@ nav {
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
+    color: white;
 }
 
 .pages>div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .pages h3 {
@@ -134,7 +159,7 @@ nav {
 }
 
 .pages svg:hover {
-    animation: dot 0.5s ease-in-out infinite alternate;
+    animation: dot 0.7s ease-in-out infinite alternate;
 }
 
 .pages svg.active {
@@ -147,8 +172,10 @@ nav {
     }
 
     100% {
-        transform: scale(4);
+        transform: scale(2.5)
     }
+
+
 }
 
 .banner {
@@ -162,6 +189,12 @@ nav {
     width: 100%;
     object-fit: cover;
     object-position: top;
+    -webkit-filter: brightness(105%);
+    filter: brightness(105%);
+}
+
+.banner .barber-bg {
+    object-position: center;
 }
 
 .author {
@@ -169,10 +202,34 @@ nav {
     top: 70%;
     left: 50%;
     transform: translate(-50%, -70%);
-    color: white;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 8px 8px rgba(31, 30, 30, 0.438);
 }
+
+.description-nav {
+
+    position: absolute;
+    top: 0;
+    margin: auto;
+    height: 10vh;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    right: 0;
+    left: 0;
+    color: black;
+    pointer-events: none;
+}
+
+.description-nav img {
+    height: auto;
+    width: auto;
+    cursor: pointer;
+}
+
 
 .author h1 {
     font-size: 42px;
@@ -187,6 +244,7 @@ nav {
 .my-work {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 90%;
     margin: auto;
     padding: 80px 0px;
@@ -212,14 +270,20 @@ nav {
 .work-gallery {
     display: grid;
     grid-template-columns: repeat(3, 200px);
+    height: 400px;
 }
 
 .work-gallery img {
     width: 100%;
 }
 
-@media (max-width: 1024px) {
+.color-white {
+    color: white;
+}
+
+@media (max-width: 1218px) {
     .page {
+        height: 90vh;
         grid-template-columns: 5% 1fr 5%;
         grid-template-rows: 2fr 1fr;
         align-items: center;
@@ -238,6 +302,7 @@ nav {
         grid-row: 2/3;
         grid-column: 2/3;
         text-align: center;
+        margin-bottom: 5px;
     }
 
     .details h1 {
@@ -245,12 +310,22 @@ nav {
     }
 
     .details h2 {
-        font-size: 38px;
+        font-size: 36px;
+    }
+
+    .details p {
+        font-size: 24px;
     }
 
     .story,
     .my-work {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .story p,
+    .my-work p {
+        padding-bottom: 30px;
     }
 
     .story-description,
@@ -261,15 +336,15 @@ nav {
     .work-gallery {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        height: auto;
+        width: 100%;
     }
 
-    .profile {
-        padding-top: 30px;
-        text-align: center;
-    }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px),
+screen and (max-height: 900px) {
+
     .hero img {
         height: 400px;
     }
@@ -279,17 +354,45 @@ nav {
     }
 
     .details h2 {
-        font-size: 28px;
+        font-size: 26px;
+        padding: 0;
+    }
+
+    .details p {
+        font-size: 14px;
     }
 }
+
+@media screen and (max-width: 600px),
+screen and (max-height: 600px) {
+
+    .hero img {
+        height: 250px;
+    }
+
+    .details h1 {
+        font-size: 30px;
+    }
+
+    .details h2 {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .details p {
+        font-size: 10px;
+    }
+}
+
+
 
 .nav-open {
     position: absolute;
     top: 0px;
     left: 0px;
     width: 100%;
+    opacity: 1;
     height: 50vh;
-    opacity: 0;
     background: white;
     z-index: 1;
     color: black;
@@ -298,7 +401,7 @@ nav {
     justify-items: center;
     align-items: center;
     text-align: center;
-    transform: translateY(-100%);
+    /* pointer-events: none; */
 }
 
 .contact {
@@ -321,4 +424,5 @@ nav {
 .logo,
 .menu {
     z-index: 2;
+    cursor: pointer;
 }

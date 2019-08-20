@@ -2,7 +2,7 @@ function init() {
     const slide = document.querySelectorAll('.slide');
     const pages = document.querySelectorAll('.page');
     const backgrounds = [
-        'radial-gradient(1267.00px at 50% -4.31%, #001C27 0%, #414141 100%)',
+        'radial-gradient(1560.00px at 50% -31.44%, #08364A 0%, #2D444D 100%);',
         'radial-gradient(1267.00px at 50% -4.31%, #8E0A0A 0%, #4E3E3E 100%)',
         'radial-gradient(1267.00px at 50% -4.31%, #39342F 0%, #7A6E6E 100%)'
     ];
@@ -39,12 +39,12 @@ function init() {
 
 
         const tl = new TimelineMax({
-            onStart: function () {
+            onStart: function(){
                 slide.forEach(slide => {
                     slide.style.pointerEvents = 'none';
                 });
             },
-            onComplete: function () {
+            onComplete: function() {
                 slide.forEach(slide => {
                     slide.style.pointerEvents = 'all';
                 })
@@ -53,24 +53,24 @@ function init() {
 
         tl.fromTo(currentLeft, 0.3, { y: "-10%" }, { y: "-100%" })
             .fromTo(currentRight, 0.3, { y: "10%" }, { y: "-100%" }, "-=0.2")
-            .to(portfolio, 0.3, { backgroundImage: backgrounds[pageNumber] })
+            .to(portfolio, 0.3, {backgroundImage: backgrounds[pageNumber]})
             .fromTo(
                 currentPage,
                 0.3,
-                { opacity: 1, pointerEvents: "all" },
-                { opacity: 0, pointerEvents: "none" }
+                {opacity: 1, pointerEvents: "all"},
+                {opacity:0, pointerEvents: "none"}
             )
             .fromTo(
                 nextPage,
                 0.3,
-                { opacity: 0, pointerEvents: "none" },
-                { opacity: 1, pointerEvents: "all" },
+                {opacity: 0, pointerEvents: "none"},
+                {opacity: 1, pointerEvents: "all"},
             )
             .fromTo(
                 nextLeft,
                 0.3,
-                { y: '-100%' },
-                { y: '-10%' },
+                {y:'-100%'},
+                {y:'-10%'},
                 '-=0.4'
             )
             .fromTo(
@@ -83,13 +83,13 @@ function init() {
             .fromTo(
                 nextText,
                 0.3,
-                { opacity: 0, y: -30 },
-                { opacity: 1, y: 0 },
+                {opacity: 0, y: -30},
+                {opacity: 1, y: 0},
                 // '-=0.3'
             )
             .set(
                 nextLeft,
-                { clearProps: 'all' }
+                {clearProps: 'all'}
             )
             .set(
                 nextRight,
@@ -97,11 +97,9 @@ function init() {
             )
 
         current = pageNumber;
-
     }
 
     // Detect scroll
-
     document.addEventListener("wheel", throttle(scrollChange, 1500));
     document.addEventListener("touchmove", throttle(scrollChange, 1500));
 
@@ -114,108 +112,37 @@ function init() {
     }
 
     function scrollChange(e) {
-        if (e.deltaY > 0) {
-            scrollSlide += 1;
+        if(e.deltaY > 0){
+            scrollSlide +=1;
         } else {
-            scrollSlide -= 1;
+            scrollSlide -=1;
         }
 
-        if (scrollSlide > 2) {
+        if(scrollSlide > 2) {
             scrollSlide = 0;
         }
-        if (scrollSlide < 0) {
+        if(scrollSlide < 0) {
             scrollSlide = 2;
         }
         nextSlide(scrollSlide);
         switchDots(scrollSlide);
         console.log(scrollSlide)
     };
+};
 
-    const button = document.querySelector(".menu");
-    const hamburgerLines = document.querySelectorAll(".menu line");
-    const navOpen = document.querySelector(".nav-open");
-    const contact = document.querySelector(".contact");
-    const social = document.querySelector(".social");
-    const logo = document.querySelector(".logo");
 
-    const tl = new TimelineMax({ paused: true, reversed: true });
-
-    tl.to(
-        navOpen,
-        0.1,
-        { opacity: 0, pointerEvents: "none", y: 10 },
-        { opacity: 1, pointerEvents: "auto", y: 0 },
-        "-=0.1"
-    )
-        .to(
-            navOpen,
-            0.5, { y: 0 }
-        )
-        .fromTo(
-            contact,
-            0.5,
-            { opacity: 0, y: 10 },
-            { opacity: 1, y: 0 },
-            "-=0.1"
-        )
-        .fromTo(
-            navOpen,
-            0.1,
-            { opacity: 0, y: 10 },
-            { opacity: 1, y: 0 },
-            "-=0.1"
-        )
-        .fromTo(
-            social,
-            0.5,
-            { opacity: 0, y: 10 },
-            { opacity: 1, y: 0 },
-            "-=0.5"
-        )
-        .fromTo(
-            logo,
-            0.3,
-            { color: "white" },
-            { color: "black" },
-            "-=1"
-        )
-        .fromTo(
-            hamburgerLines,
-            0.2,
-            { stroke: "white" },
-            { stroke: "black" },
-            "-=1"
-        )
-        .fromTo(
-            navOpen,
-            0.3,
-            { display: "none" },
-            { display: "grid" },
-        )
-
-    console.log(button);
-    button.addEventListener("click", function () {
-        tl.reversed() ? tl.play() : tl.reverse();
-    });
-    button.addEventListener("click", function () {
-        console.log("XD");
-    });
-
-    console.log(button);
-}
 
 function throttle(func, limit) {
-    let inThrottle;
-    return function () {
-        const args = arguments;
-        const context = this;
-        if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => (inThrottle = false), limit);
-        }
-    };
+  let inThrottle;
+  return function() {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
 }
-
 
 init();
