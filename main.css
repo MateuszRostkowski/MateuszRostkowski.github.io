@@ -17,6 +17,7 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
+    flex-direction: column;
 }
 
 .container a {
@@ -25,6 +26,7 @@ body {
 }
 .container h1 {
     font-family: FiraBold;
+    display: block;
 }
 
 @font-face {
