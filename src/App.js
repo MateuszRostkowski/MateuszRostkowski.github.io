@@ -3,47 +3,19 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  NavLink
 } from "react-router-dom";
-
-function About() {
-  return <h1>My name is Mat</h1>
-}
-
-function Contact() {
-  return <h1>You can finde me here :</h1>
-}
-
-function Home() {
-  return <h1>Home</h1>
-}
-
-function NotFound() {
-  return <h1>404 - not found</h1>
-}
-
+import Navbar from "./Components/Navbar";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
+import Home from "./Components/Home";
+import NotFound from "./Components/NotFound";
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <nav>
-            <ul>
-              <li>
-                <NavLink activeClassName="nav-active" to="/">Home</NavLink>
-              </li>
-              <li>
-                <NavLink activeClassName="nav-active" to="/about">About</NavLink>
-              </li>
-              <li>
-                <NavLink activeClassName="nav-active" to="/contact">Contact</NavLink>
-              </li>
-            </ul>
-          </nav>
-  
-          {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
+          <Navbar />
           <Switch>
             <Route exact path="/about">
               <About />
@@ -62,7 +34,6 @@ class App extends Component {
       </Router>
     );
   }
-  
 }
 
-export default App
+export default App;
