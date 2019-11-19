@@ -9,6 +9,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Home from "./Components/Home";
 import NotFound from "./Components/NotFound";
+import './App.scss';
 
 class App extends Component {
   render() {
