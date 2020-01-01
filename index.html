@@ -15,35 +15,91 @@
 
     <div class="container">
         <div class="container__item">
+            <span class="app__info">Click on info icon to display more information.</span>
+        </div>
+        <div class="container__item">
             <a href="http://jsmessenger.surge.sh/"><span class="app__name">LiveChat</span> - App</a>
             <a href="https://github.com/MateuszRostkowski/messenger_javascript">
                 <i class="fa fa-github"></i>
             </a>
+            <i class="fa fa-info-circle info__icon"></i>
+            <div class="more-info more-info--hidden">
+               <div class="more-info__close">X</div>
+                More information
+            </div>
         </div>
         <div class="container__item">
             <a href="https://police-and-thives.netlify.com/"><span class="app__name">Police and Thives</span> - Game</a>
             <a href="https://github.com/MateuszRostkowski/PoliceAndThives">
                 <i class="fa fa-github"></i>
             </a>
+            <i class="fa fa-info-circle info__icon"></i>
+            <div class="more-info more-info--hidden">
+               <div class="more-info__close">X</div>
+                More information
+            </div>
+
         </div>
         <div class="container__item">
             <a href="http://www.frontczewscy.jfdd13.is-academy.pl/"><span class="app__name">Concerte</span> - Team Project</a>
             <a href="https://github.com/infoshareacademy/jfdd13-frontczewscy">
                 <i class="fa fa-github"></i>
             </a>
+            <i class="fa fa-info-circle info__icon"></i>
+            <div class="more-info more-info--hidden">
+               <div class="more-info__close">X</div>
+                More information
+            </div>
         </div>
         <div class="container__item">
             <a href="http://app.frontczewscy.jfdd13.is-academy.pl/"><span class="app__name">Concerte App</span> - Team Project</a>
             <a href="https://github.com/infoshareacademy/jfdd13-frontczewscy-app">
                 <i class="fa fa-github"></i>
             </a>
+            <i class="fa fa-info-circle info__icon"></i>
+            <div class="more-info more-info--hidden">
+               <div class="more-info__close">X</div>
+                More information
+            </div>
         </div>
         <div class="container__item">
             <a href="https://mateuszrostkowski.github.io/TicTacToe/"><span class="app__name">TicTacToe</span> - Simple Game in React</a>
             <a href="https://github.com/MateuszRostkowski/TicTacToe">
                 <i class="fa fa-github"></i>
             </a>
+            <i class="fa fa-info-circle info__icon"></i>
+            <div class="more-info more-info--hidden">
+                <div class="more-info__close">X</div>
+                More information
+            </div>
         </div>
     </div>
+
+    <script>
+    
+        const infoIcons = document.querySelectorAll(".info__icon")
+        const moreInfoElements = document.querySelectorAll(".more-info")
+        const closeButtons = document.querySelectorAll(".more-info__close")
+
+        function closeInfo() {
+            moreInfoElements.forEach((element) => {
+                element.classList.add('more-info--hidden')
+            })
+        }
+
+        closeButtons.forEach((button) => {
+            button.addEventListener('click', closeInfo)
+        })
+
+
+        infoIcons.forEach((icon) => {
+            icon.addEventListener('click', () => {
+                const moreInfo = icon.parentElement.querySelector('.more-info')
+                closeInfo()
+                moreInfo.classList.remove('more-info--hidden')
+            })
+        })
+    
+    </script>
 </body>
 </html>

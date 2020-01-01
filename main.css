@@ -24,12 +24,14 @@ body {
     overflow: hidden;
 }
 
-.container a {
+.container a,
+.info__icon {
     text-decoration: none;
     color: white;
     display: inline;
     font-size: 30px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .container i:hover,
@@ -43,4 +45,12 @@ body {
 .app__info {
     color: red;
     font-size: 20px;
+}
+
+.more-info {
+    color: white;
+}
+
+.more-info--hidden {
+    display: none;
 }
