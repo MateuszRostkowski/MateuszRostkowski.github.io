@@ -25,6 +25,10 @@ body {
     overflow: hidden;
 }
 
+.container__item {
+    margin-bottom: 10px;
+}
+
 .container a,
 .info__icon {
     text-decoration: none;
@@ -44,8 +48,8 @@ body {
 }
 
 .app__info {
-    color: red;
-    font-size: 20px;
+    color: white;
+    font-size: 27px;
 }
 
 .more-info {
@@ -55,12 +59,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    background: yellow;
-    color: black;
+    background: black;
+    color: white;
+    border: 7px solid white;
     width: 50%;
-    height: 50%;  
+    height: 50%;
     padding: 20px;
-    padding-top: 40px; 
+    padding-top: 40px;
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     pointer-events: all;
 }
@@ -74,11 +79,13 @@ body {
 
 .more-info__close {
     position: absolute;
-    top:0;
+    top: 0;
     right: 0;
     padding: 5px 15px;
     color: white;
-    background: red;
+    font-weight: bold;
+    border-left: 5px solid white;
+    border-bottom: 5px solid white;
     cursor: pointer;
 }
 

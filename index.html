@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+    
     <div class="container">
         <div class="container__item">
             <span class="app__info">Click on info icon to display more information.</span>
@@ -73,10 +73,61 @@
                 Simple TicTacToe game made in React
             </div>
         </div>
+
+        <div class="container__item">
+            <a href="http://javascriptmasters.netlify.com/"><span class="app__name">JavascriptMasters</span> - Gatsby blog about Javascript</a>
+            <a href="https://github.com/MateuszRostkowski/Gatsby_blog">
+                <i class="fa fa-github"></i>
+            </a>
+            <i class="fa fa-info-circle info__icon"></i>
+            <div class="more-info more-info--hidden">
+                <div class="more-info__close">X</div>
+                This blog was made using Gatsby
+            </div>
+        </div> 
+
+        <div class="container__item">
+            <a href="https://weather-location.netlify.com/"><span class="app__name">Weather app</span> - simple javascript app</a>
+            <a href="">
+                <i class="fa fa-github"></i>
+            </a>
+            <i class="fa fa-info-circle info__icon"></i>
+            <div class="more-info more-info--hidden">
+                <div class="more-info__close">X</div>
+                Weather app made with vanilla javascript. You need to allow use your location to fully use this site.
+            </div>
+        </div> 
+        
+        <div class="container__item">
+            <a href="http://rock-paper-sizor.surge.sh/"><span class="app__name">RockPaperScissors</span> - Game in JS</a>
+            <a href="https://github.com/MateuszRostkowski/RockPaperScissors">
+                <i class="fa fa-github"></i>
+            </a>
+            <i class="fa fa-info-circle info__icon"></i>
+            <div class="more-info more-info--hidden">
+                <div class="more-info__close">X</div>
+                This is a simple RockPaperScissors game made in vanilla Javascript
+            </div>
+        </div> 
+        
+        <!-- Sample of container__item
+            
+        <div class="container__item">
+            <a href=""><span class="app__name"></span></a>
+            <a href="">
+                <i class="fa fa-github"></i>
+            </a>
+            <i class="fa fa-info-circle info__icon"></i>
+            <div class="more-info more-info--hidden">
+                <div class="more-info__close">X</div>
+                
+            </div>
+        </div> 
+    
+        -->
     </div>
 
-    <script>
-    
+    <script>    
         const infoIcons = document.querySelectorAll(".info__icon")
         const moreInfoElements = document.querySelectorAll(".more-info")
         const closeButtons = document.querySelectorAll(".more-info__close")
