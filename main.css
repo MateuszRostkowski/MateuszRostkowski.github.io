@@ -98,6 +98,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     text-align: center;
+    font-size: 24px;
 }
 
 .container__item {
@@ -109,7 +110,6 @@ body {
     text-decoration: none;
     color: white;
     display: inline;
-    font-size: 30px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -124,7 +124,6 @@ body {
 
 .app__info {
     color: white;
-    font-size: 27px;
 }
 
 .more-info {
@@ -168,22 +167,38 @@ body {
     opacity: 0.8;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+    .navbar__burger {
+        transform: scale(0.7);
+    }   
+    
+    .navbar__logo {
+        font-size: 16px;
+    }
+
+    .container {
+        font-size: 16px;
+    }
+    .container__item {
+        margin: 2px;
+    }
+}
+
+@media (max-width: 700px) {
     .navbar__burger {
         transform: scale(0.5);
     }
     
     .navbar__logo {
-        font-size: 13px;
+        font-size: 11px;
     }
 
-    .container a,
-    .info__icon {
-        font-size: 13px;
+    .container {
+        font-size: 11px;
     }
-
-    .app__info {
-        font-size: 12px;
+    
+    .container__item {
+        margin: 0;
     }
 }
 
