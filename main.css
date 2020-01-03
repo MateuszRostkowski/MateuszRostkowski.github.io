@@ -14,6 +14,77 @@ body {
     font-family: 'Fira Code', monospace;
 }
 
+.navbar {
+    position: fixed;
+    color: white;
+    left:0;
+    top:0;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar__logo {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.navbar__burger {
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.site-menu {
+    position: fixed;
+    color: white;
+    left:0;
+    top:0;
+    z-index: 4;
+    width:100%;
+    height:100vh;
+    overflow: hidden;
+    background: #454545;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s ease;
+    pointer-events: all;
+}
+
+.site-menu.hidden {
+    opacity:0;
+    transform:translateX(-100%);
+    pointer-events: none;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.3s ease;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.change .bar2 {
+    -webkit-transform: translateX(-20px);;
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
 .container {
     position: relative;
     display: flex;
@@ -23,6 +94,7 @@ body {
     height: 100vh;
     flex-direction: column;
     overflow: hidden;
+    text-align: center;
 }
 
 .container__item {
@@ -92,3 +164,26 @@ body {
 .more-info__close:hover {
     opacity: 0.8;
 }
+
+@media (max-width: 900px) {
+    .navbar__burger {
+        transform: scale(0.5);
+    }
+    
+    .navbar__logo {
+        font-size: 13px;
+    }
+
+    .container a,
+    .info__icon {
+        font-size: 13px;
+    }
+
+    .app__info {
+        font-size: 12px;
+    }
+}
+
+
+
+

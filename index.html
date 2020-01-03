@@ -12,7 +12,17 @@
 </head>
 
 <body>
-    
+    <div class="navbar">
+        <div class="navbar__logo">Mateusz Rostkowski</div>
+        <div class="navbar__burger" id="menuBtn">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+    <div class="site-menu hidden" id="siteMenu">
+        <p>Here would be menu on my site :)</p>
+    </div>
     <div class="container">
         <div class="container__item">
             <span class="app__info">Click on info icon to display more information.</span>
@@ -131,6 +141,18 @@
         const infoIcons = document.querySelectorAll(".info__icon")
         const moreInfoElements = document.querySelectorAll(".more-info")
         const closeButtons = document.querySelectorAll(".more-info__close")
+
+        const menuBtn = document.querySelector("#menuBtn")
+        const siteMenu = document.querySelector("#siteMenu")
+
+
+        function toggleMenu() {
+            console.log("XD")
+            menuBtn.classList.toggle("change");
+            siteMenu.classList.toggle("hidden");
+        }
+
+        menuBtn.addEventListener('click', toggleMenu)
 
         function closeInfo() {
             moreInfoElements.forEach((element) => {
