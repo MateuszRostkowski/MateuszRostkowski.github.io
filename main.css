@@ -51,13 +51,16 @@ body {
     justify-content: center;
     align-items: center;
     transition: 0.6s ease;
-    pointer-events: all;
+    transform:translateX(0%);
+    left: -100%;
+    opacity:0;
+    
 }
 
-.site-menu.hidden {
-    opacity:0;
-    transform:translateX(-100%);
-    pointer-events: none;
+.site-menu.shown {
+    opacity:1;
+    pointer-events: all;
+    transform:translateX(100%);
 }
 
 .bar1, .bar2, .bar3 {
