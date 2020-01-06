@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
 
+:root {
+    --main-bg-color: #000;
+    --main-color: #fff;
+    --hover-color: rgb(95, 93, 177);;
+    --nav-bg-color: #454545;
+}
+
+/*
+    var(--main-bg-color)
+    var(--main-color)
+    var(--hover-color)
+    var(--nav-bg-color)
+*/
+
+
 *,
 *::before,
 *::after {
@@ -10,13 +25,31 @@
 
 
 body {
-    background-color: black;
+    background-color: var(--main-bg-color);
     font-family: 'Fira Code', monospace;
+}
+
+.copyright {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--main-color);
+}
+
+.copyright a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    color: var(--hover-color);
 }
 
 .navbar {
     position: fixed;
-    color: white;
+    color: var(--main-color);
     left:0;
     top:0;
     z-index: 5;
@@ -39,14 +72,14 @@ body {
 
 .site-menu {
     position: fixed;
-    color: white;
+    color: var(--main-color);
     left:0;
     top:0;
     z-index: 4;
     width:100%;
     height:100vh;
     overflow: hidden;
-    background: #454545;
+    background: var(--nav-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +100,7 @@ body {
     width: 35px;
     height: 5px;
     border-radius: 2.5px;
-    background-color: white;
+    background-color: var(--main-color);
     margin: 6px 0;
     transition: 0.3s ease;
 }
@@ -108,7 +141,7 @@ body {
 .container a,
 .info__icon {
     text-decoration: none;
-    color: white;
+    color: var(--main-color);
     display: inline;
     font-weight: bold;
     cursor: pointer;
@@ -116,14 +149,14 @@ body {
 
 .container i:hover,
 .app__name {
-    color: rgb(95, 93, 177);
+    color: var(--hover-color);
 }
 .container h1 {
     display: block;
 }
 
 .app__info {
-    color: white;
+    color: var(--main-color);
 }
 
 .more-info {
@@ -133,9 +166,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    background: black;
-    color: white;
-    border: 7px solid white;
+    background: var(--main-bg-color);
+    color: var(--main-color);
+    border: 7px solid var(--main-color);
     width: 50%;
     height: 50%;
     padding: 20px;
@@ -156,10 +189,10 @@ body {
     top: 0;
     right: 0;
     padding: 5px 15px;
-    color: white;
+    color: var(--main-color);
     font-weight: bold;
-    border-left: 5px solid white;
-    border-bottom: 5px solid white;
+    border-left: 5px solid var(--main-color);
+    border-bottom: 5px solid var(--main-color);
     cursor: pointer;
 }
 
