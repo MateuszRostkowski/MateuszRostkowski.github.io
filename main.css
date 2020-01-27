@@ -23,14 +23,22 @@
     padding: 0;
 }
 
+.my-element {
+    
+}
+
 
 body {
     background-color: var(--main-bg-color);
+    background-image: radial-gradient(100% 177.78% at 100% 100%, #1F1F1F 0%, #333331 100%);;
     font-family: 'Fira Code', monospace;
+    padding-bottom: 50px;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .copyright {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     display: flex;
     justify-content: center;
@@ -77,7 +85,7 @@ body {
     top:0;
     z-index: 4;
     width:100%;
-    height:100vh;
+    height: 100%;
     overflow: hidden;
     background: var(--nav-bg-color);
     display: flex;
@@ -168,7 +176,7 @@ body {
     transform: translate(-50%, -50%) scale(1);
     background: var(--main-bg-color);
     color: var(--main-color);
-    border: 7px solid var(--main-color);
+    border: 2px solid var(--main-color);
     width: 50%;
     height: 50%;
     padding: 20px;
@@ -191,8 +199,8 @@ body {
     padding: 5px 15px;
     color: var(--main-color);
     font-weight: bold;
-    border-left: 5px solid var(--main-color);
-    border-bottom: 5px solid var(--main-color);
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
     cursor: pointer;
 }
 
