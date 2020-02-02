@@ -78,6 +78,15 @@ const data = [
       moreInfo:
         "This is a simple RockPaperScissors game made in vanilla Javascript",
       moreInfoPhoto: ""
+    },
+    {
+      name: "WheaterApp",
+      shortDesc: "Mobile app in react native",
+      liveDemo: "https://github.com/MateuszRostkowski/WeatherNativeApp",
+      githubLink: "https://github.com/MateuszRostkowski/WeatherNativeApp",
+      moreInfo:
+        "Simple wheater app made in react native and expo",
+      moreInfoPhoto: ""
     }
   ];
   
