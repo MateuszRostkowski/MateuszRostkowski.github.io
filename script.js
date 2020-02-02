@@ -72,19 +72,51 @@ const data = [
         moreInfoPhoto: ""
     },
     {
-        name: "Police and Thives",
-        shortDesc: "Game in JS",
-        liveDemo: "",
-        githubLink: "",
-        moreInfo: "",
+        name: "Concerte",
+        shortDesc: "Team Project",
+        liveDemo: "http://www.frontczewscy.jfdd13.is-academy.pl/",
+        githubLink: "https://github.com/infoshareacademy/jfdd13-frontczewscy",
+        moreInfo: "Team Project that was made on a bootcamp. Made with HTML, CSS and Javascript.",
         moreInfoPhoto: ""
     },
     {
-        name: "Police and Thives",
-        shortDesc: "Game in JS",
-        liveDemo: "",
+        name: "Concerte App",
+        shortDesc: "Team Project",
+        liveDemo: "http://app.frontczewscy.jfdd13.is-academy.pl/",
+        githubLink: "https://github.com/infoshareacademy/jfdd13-frontczewscy-app",
+        moreInfo: "Team Project that was made on a bootcamp. Made with ReactJS, firebase and more.",
+        moreInfoPhoto: ""
+    },
+    {
+        name: "TicTacToe",
+        shortDesc: "Simple Game in React",
+        liveDemo: "https://mateuszrostkowski.github.io/TicTacToe/",
+        githubLink: "https://github.com/MateuszRostkowski/TicTacToe",
+        moreInfo: "Simple TicTacToe game made in React",
+        moreInfoPhoto: ""
+    },
+    {
+        name: "JavascriptMasters",
+        shortDesc: "Gatsby blog about Javascript",
+        liveDemo: "http://javascriptmasters.netlify.com/",
+        githubLink: "https://github.com/MateuszRostkowski/Gatsby_blog",
+        moreInfo: "This blog was made using Gatsby",
+        moreInfoPhoto: ""
+    },
+    {
+        name: "Weather app",
+        shortDesc: "simple javascript app",
+        liveDemo: "https://weather-location.netlify.com/",
         githubLink: "",
-        moreInfo: "",
+        moreInfo: "Weather app made with vanilla javascript. You need to allow use your location to fully use this site.",
+        moreInfoPhoto: ""
+    },
+    {
+        name: "RockPaperScissors",
+        shortDesc: "Game in JS",
+        liveDemo: "http://rock-paper-sizor.surge.sh/",
+        githubLink: "https://github.com/MateuszRostkowski/RockPaperScissors",
+        moreInfo: "This is a simple RockPaperScissors game made in vanilla Javascript",
         moreInfoPhoto: ""
     },
 ]
