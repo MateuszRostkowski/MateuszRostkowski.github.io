@@ -91,10 +91,10 @@ const data = [
   ];
   
   data.forEach(element => {
-      const { name, shortDesc, githubLink, moreInfo, moreInfoPhoto } = element;
+      const { name, shortDesc, liveDemo, githubLink, moreInfo, moreInfoPhoto } = element;
       jsContainer.innerHTML += `
             <div class="container__item">
-                <a href=""><span class="app__name">${name}</span> - ${shortDesc}</a>
+                <a href="${liveDemo}"><span class="app__name">${name}</span> - ${shortDesc}</a>
                 <a href="${githubLink}">
                     <i class="fa fa-github"></i>
                 </a>
