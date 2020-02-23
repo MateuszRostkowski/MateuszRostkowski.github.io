@@ -146,3 +146,11 @@ function setHeightVariable() {
 setHeightVariable();
 
 window.addEventListener("resize", setHeightVariable);
+
+window.addEventListener(
+  'load',                                                         // when site is fully loaded
+  () => {
+      const preloader = document.querySelector('.preloader')      
+      preloader.classList.add('preloader-finish')                 // add class to the preloader
+  }
+)
