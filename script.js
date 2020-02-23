@@ -97,9 +97,13 @@ const data = [
         <img class="more-info-photo more-info-trigger" src=${moreInfoPhoto} />
         <div class="more-info more-info--hidden">
           <div class="more-info__close">X</div>
-          <a href="${liveDemo}"><span class="app__name">${name}</span> - ${shortDesc}</a>
+          <h1 class="more-info-header">${name}</h1>
+          
           <p>${moreInfo}</p>
-          <a class="more-info-github" href="${githubLink}">
+          <a href="${liveDemo}" target="_blank" >
+            <span class="app__name">Live Demo</span>
+          </a>
+          <a class="more-info-github" target="_blank" href="${githubLink}">
             <i class="fa fa-github"></i>
           </a>
           <img class="more-info-photo-desc" src=${moreInfoPhoto} />
