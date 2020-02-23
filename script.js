@@ -102,6 +102,7 @@ const data = [
           <a class="more-info-github" href="${githubLink}">
             <i class="fa fa-github"></i>
           </a>
+          <img class="more-info-photo-desc" src=${moreInfoPhoto} />
         </div>
       </div> 
     `;
