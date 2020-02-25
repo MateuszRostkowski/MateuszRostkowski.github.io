@@ -95,6 +95,17 @@ body {
   transform: translateX(100%);
 }
 
+.site-menu__icons a{
+  font-size: 51px;
+  color: black;
+  text-decoration: none ;
+  transition: 0.3s ease;
+}
+
+.site-menu__icons a:hover{
+  color:  var(--hover-color);
+}
+
 .bar1,
 .bar2,
 .bar3 {
