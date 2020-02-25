@@ -154,6 +154,7 @@ window.addEventListener("resize", setHeightVariable);
 window.addEventListener(
   'load',                                                         // when site is fully loaded
   () => {
+      document.body.style.overflowY = "auto"
       const preloader = document.querySelector('.preloader')      
       preloader.classList.add('preloader-finish')                 // add class to the preloader
   }
