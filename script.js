@@ -93,7 +93,8 @@ const data = [
   data.forEach(element => {
     const { name, shortDesc, liveDemo, githubLink, moreInfo, moreInfoPhoto } = element;
     jsContainer.innerHTML += `
-      <div class="container__item">
+      <div class="container__item" data-aos="zoom-out"
+        data-aos-anchor-placement="top-center">
         <img class="more-info-photo more-info-trigger" src=${moreInfoPhoto} />
         <div class="more-info more-info--hidden">
           <div class="more-info__close">X</div>
