@@ -258,19 +258,19 @@ body {
   padding: 0;
   flex-direction: column;
   transition: opacity 0.5s ease;
-  z-index: 20;
+  z-index: 20000;
 }
 
 .preloader-finish {
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
 }
 
 .loader {
-  // You can add your own properties here
   width: 30px;
   height: 30px;
   z-index:3;
+  margin-bottom: 10px;
   border: 4px solid #566b78;
   animation: loader 2s infinite ease;
 }
@@ -290,17 +290,13 @@ body {
   0% {
       transform: rotate(0deg);
   }  
-  25% {
-      transform: rotate(180deg);
-  }  
+    
   50% {
-      transform: rotate(180deg);
-  }  
-  75% {
       transform: rotate(360deg);
   }  
+    
   100% {
-      transform: rotate(360deg);
+      transform: rotate(900deg);
   }
 }
 
