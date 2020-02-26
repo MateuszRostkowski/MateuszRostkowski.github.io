@@ -13,7 +13,7 @@ const data = [
     {
       name: "RockPaperScissors",
       shortDesc: "Game in JS",
-      liveDemo: "",
+      liveDemo: "http://rock-paper-sizor.surge.sh/",
       githubLink: "https://github.com/MateuszRostkowski/RockPaperScissors",
       moreInfo:
         "This is a simple RockPaperScissors game made in vanilla Javascript",
@@ -93,9 +93,8 @@ const data = [
   data.forEach(element => {
     const { name, shortDesc, liveDemo, githubLink, moreInfo, moreInfoPhoto } = element;
     jsContainer.innerHTML += `
-      <div class="container__item" data-aos="zoom-out"
-        data-aos-anchor-placement="top-center">
-        <img class="more-info-photo more-info-trigger" src=${moreInfoPhoto} />
+      <div class="container__item" >
+        <img class="more-info-photo more-info-trigger" src=${moreInfoPhoto} data-aos="zoom-out"/>
         <div class="more-info more-info--hidden">
           <div class="more-info__close">X</div>
           <h1 class="more-info-header">${name}</h1>
@@ -109,7 +108,8 @@ const data = [
           </a>
           <img class="more-info-photo-desc" src=${moreInfoPhoto} />
         </div>
-      </div> 
+      </div>
+      
     `;
   });
 
