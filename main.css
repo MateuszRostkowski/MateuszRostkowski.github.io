@@ -95,6 +95,16 @@ body {
   transform: translateX(100%);
 }
 
+.site-menu__link {
+  font-size: 40px;
+  margin: 10px;
+  color: var(--main-color);
+}
+
+.site-menu__link:hover {
+  color: var(--hover-color);
+}
+
 .bar1,
 .bar2,
 .bar3 {
