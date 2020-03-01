@@ -305,6 +305,11 @@ body {
   cursor: pointer;
 }
 
+.more-info-photo:hover {
+  -webkit-transform: scale(1.05) !important;
+          transform: scale(1.05) !important;
+}
+
 .more-info-photo-desc {
   width: 100vmin;
   -ms-flex-item-align: center;

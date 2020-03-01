@@ -251,6 +251,10 @@ body {
     width: 100%;
     cursor: pointer;
 
+    &:hover {
+      transform: scale(1.05) !important;
+    }
+
     &-desc {
       width: 100vmin;
       align-self: center;
