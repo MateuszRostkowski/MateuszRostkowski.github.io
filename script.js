@@ -102,7 +102,7 @@ data.forEach(element => {
         
         <p>${moreInfo}</p>
         <a href="${liveDemo}" target="_blank" >
-          <span class="app__name">Live Demo</span>
+          <span class="more-info-title">Live Demo</span>
         </a>
         <a class="more-info-github" target="_blank" href="${githubLink}">
           <i class="fa fa-github"></i>
