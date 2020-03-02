@@ -98,10 +98,10 @@ data.forEach(element => {
       <img class="more-info-photo more-info-trigger" src=${moreInfoPhoto} data-aos="zoom-out"/>
       <div class="more-info more-info--hidden">
         <div class="more-info__close">X</div>
-        <h1 class="more-info-header">${name}</h1>
+        <h1 class="more-info__header">${name}</h1>
         
-        <p>${moreInfo}</p>
-        <a href="${liveDemo}" target="_blank" >
+        <p class="more-info__text">${moreInfo}</p>
+        <a class="more-info__demo" href="${liveDemo}" target="_blank" >
           <span class="more-info-title">Live Demo</span>
         </a>
         <a class="more-info-github" target="_blank" href="${githubLink}">

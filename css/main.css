@@ -273,12 +273,94 @@ body {
   pointer-events: all;
 }
 
+.more-info .more-info__close,
+.more-info .more-info__header,
+.more-info .more-info__text,
+.more-info .more-info__demo,
+.more-info .more-info-github,
+.more-info .more-info-photo-desc {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+}
+
+.more-info .more-info__close {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
+}
+
+.more-info .more-info__header {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+}
+
+.more-info .more-info__text {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+}
+
+.more-info .more-info__demo {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
+}
+
+.more-info .more-info-github {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
+}
+
+.more-info .more-info-photo-desc {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+}
+
 .more-info--hidden {
   -webkit-transform: translate(-100vw);
           transform: translate(-100vw);
   pointer-events: none;
-  -webkit-transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
-  transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
+  transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
+}
+
+.more-info--hidden .more-info__close,
+.more-info--hidden .more-info__header,
+.more-info--hidden .more-info__text,
+.more-info--hidden .more-info__demo,
+.more-info--hidden .more-info-github,
+.more-info--hidden .more-info-photo-desc {
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+  opacity: 0;
+}
+
+.more-info--hidden .more-info__close {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+}
+
+.more-info--hidden .more-info__header {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+}
+
+.more-info--hidden .more-info__text {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
+}
+
+.more-info--hidden .more-info__demo {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
+}
+
+.more-info--hidden .more-info-github {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
+}
+
+.more-info--hidden .more-info-photo-desc {
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
 }
 
 .more-info__close {
@@ -295,7 +377,7 @@ body {
   opacity: 0.8;
 }
 
-.more-info-header {
+.more-info__header {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -389,8 +471,8 @@ body {
   vertical-align: top;
   width: 100%;
   background-color: #566b78;
-  -webkit-animation: loader-inner 2s infinite ease-in;
-          animation: loader-inner 2s infinite ease-in;
+  -webkit-animation: loader-inner 2s infinite cubic-bezier(0.77, 0, 0.175, 1);
+          animation: loader-inner 2s infinite cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .none {
