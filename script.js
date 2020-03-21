@@ -9,7 +9,7 @@ const data = [
     moreInfo:
       "Live chat made in vanilla javascript.",
     moreInfoPhoto: "/assets/Messenger.png",
-    skills: ['javascript', 'html', 'css', 'oop']
+    skills: ['javascript', 'html', 'css', 'OOP']
   },
   {
     name: "RockPaperScissors",
@@ -28,7 +28,7 @@ const data = [
     githubLink: "https://github.com/MateuszRostkowski/PoliceAndThives",
     moreInfo: "Simple Game made in vanilla javascript.",
     moreInfoPhoto: "/assets/PoliceAndThives.png",
-    skills: ['javascript', 'html', 'css', 'oop']
+    skills: ['javascript', 'html', 'css', 'OOP']
   },
   {
     name: "Concerte",
@@ -101,33 +101,36 @@ const data = [
 ];
 
 // rendering containers on site
-data.forEach(element => {
-  const { name, shortDesc, liveDemo, githubLink, moreInfo, moreInfoPhoto } = element;
-  jsContainer.innerHTML += `
-    <div class="container__item" >
-      <img class="more-info-photo more-info-trigger" src=${moreInfoPhoto} data-aos="zoom-out"/>
-      <div class="more-info more-info--hidden">
-        <div class="more-info__close">X</div>
-        <h1 class="more-info__header">${name}</h1>
-        
-        <p class="more-info__text">${moreInfo}</p>
-        <a class="more-info__demo" href="${liveDemo}" target="_blank" >
-          <span class="more-info-title">Live Demo</span>
-        </a>
-        <a class="more-info-github" target="_blank" href="${githubLink}">
-          <i class="fa fa-github"></i>
-        </a>
-        <img class="more-info-photo-desc" src=${moreInfoPhoto} />
-      </div>
-    </div>
-    
-  `;
-});
 
-// selecting items from site
-const moreInfoTrigger = document.querySelectorAll(".more-info-trigger");
-const moreInfoElements = document.querySelectorAll(".more-info");
-const closeButtons = document.querySelectorAll(".more-info__close");
+function renderData(items) {
+  jsContainer.innerHTML = ''
+
+  items.forEach(element => {
+    const { name, shortDesc, liveDemo, githubLink, moreInfo, moreInfoPhoto } = element;
+    jsContainer.innerHTML += `
+      <div class="container__item" >
+        <img class="more-info-photo more-info-trigger" src=${moreInfoPhoto} data-aos="zoom-out"/>
+        <div class="more-info more-info--hidden">
+          <div class="more-info__close">X</div>
+          <h1 class="more-info__header">${name}</h1>
+          
+          <p class="more-info__text">${moreInfo}</p>
+          <a class="more-info__demo" href="${liveDemo}" target="_blank" >
+            <span class="more-info-title">Live Demo</span>
+          </a>
+          <a class="more-info-github" target="_blank" href="${githubLink}">
+            <i class="fa fa-github"></i>
+          </a>
+          <img class="more-info-photo-desc" src=${moreInfoPhoto} />
+        </div>
+      </div>
+      
+    `;
+  });
+}
+
+renderData(data)
+
 const menuBtn = document.querySelector("#menuBtn");
 const siteMenu = document.querySelector("#siteMenu");
 
@@ -139,26 +142,38 @@ function toggleMenu() {
 
 menuBtn.addEventListener("click", toggleMenu);
 
-// close more info about portfolio item
-function closeInfo() {
-  moreInfoElements.forEach(element => {
-    element.classList.add("more-info--hidden");
+function portfolioItem() {
+  // selecting items from site
+  const moreInfoTrigger = document.querySelectorAll(".more-info-trigger");
+  const moreInfoElements = document.querySelectorAll(".more-info");
+  const closeButtons = document.querySelectorAll(".more-info__close");
+
+  // close more info about portfolio item
+  function closeInfo() {
+    moreInfoElements.forEach(element => {
+      element.classList.add("more-info--hidden");
+    });
+  }
+
+  closeButtons.forEach(button => {
+    button.addEventListener("click", closeInfo);
+  });
+
+
+  // open more ino about portfolio item
+  moreInfoTrigger.forEach(icon => {
+    icon.addEventListener("click", () => {
+      const moreInfo = icon.parentElement.querySelector(".more-info");
+      closeInfo();
+      moreInfo.classList.remove("more-info--hidden");
+    });
   });
 }
 
-closeButtons.forEach(button => {
-  button.addEventListener("click", closeInfo);
-});
+portfolioItem()
 
 
-// open more ino about portfolio item
-moreInfoTrigger.forEach(icon => {
-  icon.addEventListener("click", () => {
-    const moreInfo = icon.parentElement.querySelector(".more-info");
-    closeInfo();
-    moreInfo.classList.remove("more-info--hidden");
-  });
-});
+
 
 // window height variable for styles
 function setHeightVariable() {
@@ -191,7 +206,40 @@ function findSkills(list) {
 // finding data item using skill
 
 function findDataWithSkill(data, skill) {
-  return data.filter(item => item.skills.includes(skill))
+  return data
+    .filter(item => item.skills.includes(skill))
 }
 
-console.log(findDataWithSkill(data, 'gatsby'))
+// render skillsButtons
+
+const skillsContainer = document.getElementById('skills')
+const skills = findSkills(data)
+
+skills.forEach(skill => {
+  skillsContainer.innerHTML += `
+    <button class='skill__button' >${skill}</button>
+  `
+})
+
+const skillButtons = document.querySelectorAll('.skill__button')
+
+// remove activeClass from button
+
+function removeActive() {
+  skillButtons.forEach(button => {
+    button.classList.remove('skill__button--active')
+  })
+}
+
+// listener for skillButtons
+
+skillButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    removeActive()
+    const newData = findDataWithSkill(data, button.innerHTML)
+    button.classList.add('skill__button--active')
+    renderData(newData)
+    portfolioItem()
+  })
+})
+
