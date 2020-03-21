@@ -8,7 +8,8 @@ const data = [
     githubLink: "https://github.com/MateuszRostkowski/RockPaperScissors",
     moreInfo:
       "Live chat made in vanilla javascript.",
-    moreInfoPhoto: "/assets/Messenger.png"
+    moreInfoPhoto: "/assets/Messenger.png",
+    skills: ['javascript', 'html', 'css', 'oop']
   },
   {
     name: "RockPaperScissors",
@@ -17,7 +18,8 @@ const data = [
     githubLink: "https://github.com/MateuszRostkowski/RockPaperScissors",
     moreInfo:
       "This is a simple RockPaperScissors game made in vanilla Javascript",
-    moreInfoPhoto: "/assets/RockPaper.png"
+    moreInfoPhoto: "/assets/RockPaper.png",
+    skills: ['javascript', 'html', 'css']
   },
   {
     name: "Police and Thives",
@@ -25,7 +27,8 @@ const data = [
     liveDemo: "https://police-and-thives.netlify.com/",
     githubLink: "https://github.com/MateuszRostkowski/PoliceAndThives",
     moreInfo: "Simple Game made in vanilla javascript.",
-    moreInfoPhoto: "/assets/PoliceAndThives.png"
+    moreInfoPhoto: "/assets/PoliceAndThives.png",
+    skills: ['javascript', 'html', 'css', 'oop']
   },
   {
     name: "Concerte",
@@ -34,7 +37,8 @@ const data = [
     githubLink: "https://github.com/infoshareacademy/jfdd13-frontczewscy",
     moreInfo:
       "Team Project that was made on a bootcamp. Made with HTML, CSS and Javascript.",
-    moreInfoPhoto: "/assets/Concerte.png"
+    moreInfoPhoto: "/assets/Concerte.png",
+    skills: ['javascript', 'html', 'css']
   },
   {
     name: "Concerte App",
@@ -43,7 +47,8 @@ const data = [
     githubLink: "https://github.com/infoshareacademy/jfdd13-frontczewscy-app",
     moreInfo:
       "Team Project that was made on a bootcamp. Made with ReactJS, firebase and more.",
-    moreInfoPhoto: "/assets/ConcerteApp.png"
+    moreInfoPhoto: "/assets/ConcerteApp.png",
+    skills: ['react', 'javascript', 'css', 'firebase']
   },
   {
     name: "TicTacToe",
@@ -51,7 +56,8 @@ const data = [
     liveDemo: "https://mateuszrostkowski.github.io/TicTacToe/",
     githubLink: "https://github.com/MateuszRostkowski/TicTacToe",
     moreInfo: "Simple TicTacToe game made in React",
-    moreInfoPhoto: "/assets/TicTacToe.png"
+    moreInfoPhoto: "/assets/TicTacToe.png",
+    skills: ['react', 'javascript', 'react']
   },
   {
     name: "JavascriptMasters",
@@ -59,7 +65,8 @@ const data = [
     liveDemo: "http://javascriptmasters.netlify.com/",
     githubLink: "https://github.com/MateuszRostkowski/Gatsby_blog",
     moreInfo: "This blog was made using Gatsby",
-    moreInfoPhoto: "/assets/JavascriptMaster.png"
+    moreInfoPhoto: "/assets/JavascriptMaster.png", 
+    skills: ['gatsby', 'react', 'javascript', 'scss', 'css']
   },
   {
     name: "Weather app",
@@ -68,7 +75,9 @@ const data = [
     githubLink: "",
     moreInfo:
       "Weather app made with vanilla javascript. You need to allow use your location to fully use this site.",
-    moreInfoPhoto: "/assets/WeatherApp.png"
+    moreInfoPhoto: "/assets/WeatherApp.png",
+    skills: ['javascript', 'html', 'css']
+
   },
   {
     name: "RockPaperScissors",
@@ -77,7 +86,8 @@ const data = [
     githubLink: "https://github.com/MateuszRostkowski/RockPaperScissors",
     moreInfo:
       "This is a simple RockPaperScissors game made in vanilla Javascript",
-    moreInfoPhoto: "/assets/RockPaper.png"
+    moreInfoPhoto: "/assets/RockPaper.png",
+    skills: ['javascript', 'html', 'css']
   },
   // {
   //   name: "WheaterApp",
@@ -168,3 +178,20 @@ window.addEventListener(
     preloader.classList.add('preloader-finish')                 // add class to the preloader
   }
 )
+
+// finding skills from data 
+
+function findSkills(list) {
+  return list.reduce((result, element) => {
+    result.push(...element.skills)
+    return result.filter((a, b) => result.indexOf(a) === b)
+  }, [])
+}
+
+// finding data item using skill
+
+function findDataWithSkill(data, skill) {
+  return data.filter(item => item.skills.includes(skill))
+}
+
+console.log(findDataWithSkill(data, 'gatsby'))
