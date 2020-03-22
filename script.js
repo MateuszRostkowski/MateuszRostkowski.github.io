@@ -217,7 +217,7 @@ const skills = findSkills(data)
 
 skills.forEach(skill => {
   skillsContainer.innerHTML += `
-    <button class='skill__button' >${skill}</button>
+    <button data-skill=${skill} class='skill__button' >${skill.toUpperCase()}</button>
   `
 })
 
@@ -236,7 +236,7 @@ function removeActive() {
 skillButtons.forEach(button => {
   button.addEventListener('click', () => {
     removeActive()
-    const newData = findDataWithSkill(data, button.innerHTML)
+    const newData = findDataWithSkill(data, button.dataset.skill)
     button.classList.add('skill__button--active')
     renderData(newData)
     portfolioItem()
