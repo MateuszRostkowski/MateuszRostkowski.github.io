@@ -230,7 +230,7 @@ body {
   width: 80%;
 }
 
-.container {
+#jsContainer {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -254,14 +254,17 @@ body {
   font-size: 24px;
 }
 
-.container__item {
+#jsContainer .container__item {
   max-width: 600px;
-  width: 50%;
-  padding: 10px;
+  height: 250px;
+  width: calc(50% - 20px);
+  margin: 10px;
+  position: relative;
+  background: red;
 }
 
-.container a,
-.info__icon {
+#jsContainer a,
+#jsContainer .info__icon {
   text-decoration: none;
   color: var(--main-color);
   display: inline;
@@ -269,16 +272,16 @@ body {
   cursor: pointer;
 }
 
-.container i:hover,
-.more-info-title {
+#jsContainer i:hover,
+#jsContainer .more-info-title {
   color: var(--hover-color);
 }
 
-.container h1 {
+#jsContainer .container h1 {
   display: block;
 }
 
-.more-info {
+#jsContainer .more-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,48 +308,48 @@ body {
   pointer-events: all;
 }
 
-.more-info .more-info__close,
-.more-info .more-info__header,
-.more-info .more-info__text,
-.more-info .more-info__demo,
-.more-info .more-info-github,
-.more-info .more-info-photo-desc {
+#jsContainer .more-info .more-info__close,
+#jsContainer .more-info .more-info__header,
+#jsContainer .more-info .more-info__text,
+#jsContainer .more-info .more-info__demo,
+#jsContainer .more-info .more-info-github,
+#jsContainer .more-info .more-info-photo-desc {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
   opacity: 1;
 }
 
-.more-info .more-info__close {
+#jsContainer .more-info .more-info__close {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.3s;
 }
 
-.more-info .more-info__header {
+#jsContainer .more-info .more-info__header {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
 }
 
-.more-info .more-info__text {
+#jsContainer .more-info .more-info__text {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
-.more-info .more-info__demo {
+#jsContainer .more-info .more-info__demo {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
 }
 
-.more-info .more-info-github {
+#jsContainer .more-info .more-info-github {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
 }
 
-.more-info .more-info-photo-desc {
+#jsContainer .more-info .more-info-photo-desc {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
 }
 
-.more-info--hidden {
+#jsContainer .more-info--hidden {
   -webkit-transform: translate(-100vw);
           transform: translate(-100vw);
   pointer-events: none;
@@ -354,48 +357,48 @@ body {
   transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
 }
 
-.more-info--hidden .more-info__close,
-.more-info--hidden .more-info__header,
-.more-info--hidden .more-info__text,
-.more-info--hidden .more-info__demo,
-.more-info--hidden .more-info-github,
-.more-info--hidden .more-info-photo-desc {
+#jsContainer .more-info--hidden .more-info__close,
+#jsContainer .more-info--hidden .more-info__header,
+#jsContainer .more-info--hidden .more-info__text,
+#jsContainer .more-info--hidden .more-info__demo,
+#jsContainer .more-info--hidden .more-info-github,
+#jsContainer .more-info--hidden .more-info-photo-desc {
   -webkit-transform: translateX(-20px);
           transform: translateX(-20px);
   opacity: 0;
 }
 
-.more-info--hidden .more-info__close {
+#jsContainer .more-info--hidden .more-info__close {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
 }
 
-.more-info--hidden .more-info__header {
+#jsContainer .more-info--hidden .more-info__header {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
-.more-info--hidden .more-info__text {
+#jsContainer .more-info--hidden .more-info__text {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s;
 }
 
-.more-info--hidden .more-info__demo {
+#jsContainer .more-info--hidden .more-info__demo {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.7s;
 }
 
-.more-info--hidden .more-info-github {
+#jsContainer .more-info--hidden .more-info-github {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.8s;
 }
 
-.more-info--hidden .more-info-photo-desc {
+#jsContainer .more-info--hidden .more-info-photo-desc {
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.9s;
 }
 
-.more-info__close {
+#jsContainer .more-info__close {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -405,26 +408,41 @@ body {
   cursor: pointer;
 }
 
-.more-info__close:hover {
+#jsContainer .more-info__close:hover {
   opacity: 0.8;
 }
 
-.more-info__header {
+#jsContainer .more-info__header {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.more-info-photo {
+#jsContainer .more-info-photo {
   width: 100%;
   cursor: pointer;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 2;
 }
 
-.more-info-photo:hover {
-  -webkit-transform: scale(1.05) !important;
-          transform: scale(1.05) !important;
+#jsContainer .more-info-photo-background {
+  background-color: var(--hover-color);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
 }
 
-.more-info-photo-desc {
+#jsContainer .more-info-photo:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+#jsContainer .more-info-photo-desc {
   width: 100vmin;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;

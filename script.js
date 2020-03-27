@@ -110,6 +110,7 @@ function renderData(items) {
     jsContainer.innerHTML += `
       <div class="container__item" >
         <img class="more-info-photo more-info-trigger" src=${moreInfoPhoto} data-aos="zoom-out"/>
+        <div class="more-info-photo-background" ></div>
         <div class="more-info more-info--hidden">
           <div class="more-info__close">X</div>
           <h1 class="more-info__header">${name}</h1>
