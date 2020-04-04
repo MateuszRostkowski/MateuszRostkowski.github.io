@@ -52,7 +52,7 @@ body {
   color: var(--main-color);
   left: 0;
   top: 0;
-  z-index: 5;
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,7 +432,7 @@ body {
 #jsContainer .container__item .more-info-photo-title {
   opacity: 0;
   position: absolute;
-  z-index: 3;
+  z-index: 5;
   top: 20%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-46px);
@@ -452,7 +452,7 @@ body {
 #jsContainer .container__item .more-info-photo-title2 {
   opacity: 0;
   position: absolute;
-  z-index: 3;
+  z-index: 5;
   bottom: 20%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(46px);
@@ -477,7 +477,7 @@ body {
   top: 0;
   left: 0;
   position: absolute;
-  z-index: 1;
+  z-index: 4;
 }
 
 #jsContainer .container__item .more-info-photo-desc {
@@ -485,10 +485,6 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-#jsContainer .container__item:hover .more-info-photo {
-  opacity: 0.2;
 }
 
 #jsContainer .container__item:hover .more-info-photo-title {
@@ -504,7 +500,8 @@ body {
 }
 
 #jsContainer .container__item:hover .more-info-photo-background {
-  opacity: 1;
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .portfolio__container {
