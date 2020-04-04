@@ -105,11 +105,17 @@ const data = [
 function renderData(items) {
   jsContainer.innerHTML = ''
 
-  items.forEach(element => {
+  items.forEach((element, index) => {
     const { name, shortDesc, liveDemo, githubLink, moreInfo, moreInfoPhoto } = element;
     jsContainer.innerHTML += `
       <div class="container__item" >
-        <img class="more-info-photo more-info-trigger" src=${moreInfoPhoto} data-aos="zoom-out"/>
+        <img 
+          class="more-info-photo more-info-trigger" 
+          src=${moreInfoPhoto} 
+          data-aos="fade-up"
+          data-aos-delay="${index * 150}"
+          data-aos-offset="-100"
+        />
         <div class="more-info-photo-title">${name}</div>
         <div class="more-info-photo-title2">${shortDesc}</div>
         <div class="more-info-photo-background" ></div>
