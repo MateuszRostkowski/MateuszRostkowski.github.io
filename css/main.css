@@ -258,7 +258,7 @@ body {
 
 #jsContainer .container__item {
   max-width: 500px;
-  height: 25vw;
+  max-height: 25vmax;
   width: calc(50% - 20px);
   margin: 10px;
   position: relative;
