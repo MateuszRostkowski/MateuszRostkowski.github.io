@@ -55,6 +55,7 @@ body {
   align-items: center;
   width: 100%;
   background-color: white;
+  transition: 0.3s;
 
   &__logo {
     padding: 20px;
@@ -113,6 +114,11 @@ body {
       }
     }
   }
+}
+
+.navbar--shadow {
+  box-shadow: 0px -29px 46px 6px #888888;
+  background-color: #f1f1f0;
 }
 
 .site-menu {
@@ -211,12 +217,11 @@ body {
 
   .container__item {
     max-width: 500px;
-    max-height: 25vmax;
+    max-height: 250px;
+    height: 30vmin;
     width: calc(50% - 20px);
     margin: 10px;
-    position: relative;
-  
-  
+    position: relative;  
 
     a,
     .info__icon {

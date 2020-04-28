@@ -253,3 +253,13 @@ skillButtons.forEach(button => {
   })
 })
 
+const navbar = document.querySelector('.navbar')
+
+window.addEventListener('scroll', (e) => {
+  if(window.scrollY > window.innerHeight - 200) {
+    navbar.classList.add('navbar--shadow')
+  } else (
+    navbar.classList.remove('navbar--shadow')
+  )
+})
+
