@@ -113,9 +113,7 @@ function renderData(items) {
         <img 
           class="more-info-photo " 
           src=${moreInfoPhoto} 
-          data-aos="fade-up"
-          data-aos-delay="${index * 150}"
-          data-aos-offset="-100"
+          data-aos="fade-in"
         />
         <div class="more-info-photo-title">${name}</div>
         <div class="more-info-photo-title2">${shortDesc}</div>
