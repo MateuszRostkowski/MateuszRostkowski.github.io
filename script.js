@@ -137,7 +137,9 @@ function renderData(items) {
   });
 }
 
-renderData(data)
+if(jsContainer) {
+  renderData(data)
+}
 
 const menuBtn = document.querySelector("#menuBtn");
 const siteMenu = document.querySelector("#siteMenu");
