@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="og:title" content="Mateusz Rostkowski / Front-end Developer / Portfolio" />
+  <meta property="og:url" content="https://mateuszrostkowski.github.io/" />
+  <meta property="og:site_name" content="Mateusz Rostkowski / Front-end Developer / Portfolio" />
+  <meta property="og:type" content="website" />
+  <meta name="author" content="Kacper Kreft">
+  <meta name="description"
+    content="Hello my name is Mateusz Rostkowski, creating websites and web applications as well as mobile applications is my passion.">
+  <meta name="keywords" content="front-end developer, web developer, mobile developer, recat developer, html, css">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+  <title>Mateusz Rostkowski</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.jpg" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/main.css" />
+
+   <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark-reasonable.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+  <style>
+    code.hljs {
+        border-radius: 4px;
+        padding: 12px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+  </script>
+
+</head>
+
+<body style="overflow-y: hidden;">
+
+  <div class="preloader">
+    <div class="loader">
+      
+      <img src="/assets/340_loader_11.gif" alt="loader">
+    </div>
+  </div>
+
+  <div class="site-menu" id="siteMenu">
+    <a class="site-menu__link site-menu__link--first" href="https://github.com/MateuszRostkowski/">
+      <i class="fa fa-github"></i>
+    </a>
+    <a class="site-menu__link site-menu__link--second" href="https://www.linkedin.com/in/mateusz-rostkowski/">
+      <i class="fa fa-linkedin"></i>
+    </a>
+  </div>
+
+  <div class="site">
+    <div class="navbar">
+      <div class="navbar__logo"><a href="/">Mateusz Rostkowski</a></div>
+      <div class="navbar__burger" id="menuBtn">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+
+    <div class="post__container">
+      <div class="post__header">
+    <div class="wrapper">
+        <h1>Javascript Cheatsheet [część 1]</h1>
+    </div>
+</div>
+
+<div class="post__content">
+
+<h3 id="część-1"><a href="/blog/javascript-cheatsheet">Część 1</a></h3>
+<p>Witajcie w drugiej części ściągi do javascriptu, mam nadzieje że się przyda :)</p>
+<h3 id="spis-treści">Spis treści</h3>
+<ol>
+<li><a href="#if-else">If Else</a></li>
+<li><a href="#switch-statement">Switch statement</a></li>
+<li><a href="#obiekt-math">Obiekt Math</a></li>
+<li><a href="#obiekt-daty---date">Obiekt Daty - Date</a></li>
+<li><a href="#string">String</a></li>
+<li><a href="#liczby">Liczby</a></li>
+<li><a href="#tablice---arrays">Tablice - Arrays</a></li>
+</ol>
+<h3 id="if-else">If Else</h3>
+<pre><code class="language-javascript">var age = 15
+let status = &quot;&quot;
+
+if((age &gt;= 14) &amp;&amp; (age &lt; 19)){      // wyrażenie logiczne
+    status = &quot;Eligible&quot;;            // wykonywany kod gdy wyrażenie jest prawdziwe
+}else {                             // 
+    status = &quot;Not eligible&quot;;        // wykonywany kod gdy wyrażenie jest fałyszywe
+}
+
+console.log(status)                 // &quot;Eligible&quot; </code></pre>
+<h3 id="switch-statement">Switch statement</h3>
+<pre><code class="language-javascript">let weekDay = &quot;&quot;
+let day = new Date().getDay()
+
+switch(day) {
+    case 6:
+        weekDay = &quot;Saturday&quot;;          // if (day == 6)
+        break;
+    case 0:
+        weekDay = &quot;Sunday&quot;;            // if (day == 0)
+        break;
+    default:
+        weekDay = &quot;Whatever&quot;           // else
+}
+
+console.log(day)                       // 6 albo inny dzień
+console.log(weekDay)                   // &quot;Saturday&quot;</code></pre>
+<h3 id="obiekt-math">Obiekt Math</h3>
+<pre><code class="language-javascript">var Pi = Math.PI                    // 3.141592653589793
+Math.round(2.3)                     // 2 - zaokrąglenie
+Math.round(2.5)                     // 3
+Math.pow(2, 5)                      // 32 - 2 do potęgi 5
+Math.sqrt(36)                       // 6 - pierwiastek kwadratowy
+Math.abs(-3.14)                     // 3.14 - wartość absolutna, dodatnia
+Math.ceil(3.1)                      // 4 - zaokrąglone w góre
+Math.floor(3.8)                     // 3 - zaokrąglone w dół
+Math.sin(0)                         // 0 - sinus z 0, itd.. cos, tan, atan, sain, acos,
+Math.min(1, -1, 2, -2, 3, 4)        // -2 - najmniejsza wprowadzona wartość
+Math.max(1, -1, 2, -2, 3, 4)        // 4 - największa wprowadzona wartość
+Math.log(1)                         // 0 logartym naturalny
+Math.exp(x)                         // Zwraca e^x (E.x, e = 2.7182)
+Math.random()                       // randomowa liczba pomiędzy 0 i 1
+Math.floor(Math.random() * 10) + 1; // randomowa cyfra pomiędzy 1 a 10</code></pre>
+<h3 id="obiekt-daty---date">Obiekt Daty - Date</h3>
+<pre><code class="language-javascript">var d = new Date()              // deklaracja aktualnej daty do zmiennej d
+d.getFullYear()                 // zwraca rok
+d.getMonth()                    // zwraca miesiąc 0 - 11
+d.getDate()                     // zwraca dzień miesiąca 1 - 31
+d.getHours()                    // zwraca godzinę 0 - 23
+d.getMinutes()                  // zwraca minuty 0 - 59
+d.getSeconds()                  // zwraca sekundy 0 - 59
+d.getMilliseconds()             // zwraca milisekundy 0 - 99
+d.getTime()                     // zwraca miliskeundy od 1970 1 styczneń 00 : 00</code></pre>
+<h3 id="string">String</h3>
+<pre><code class="language-javascript">var enter = &#39;I don\&#39;t \n know&#39;      // \n - nowa linia
+var len = enter.length              // długość stringa
+enter.indexOf(&quot;know&quot;)               // zwraca pozycje, -1 jeżeli nie występuje
+enter.lastIndexOf(&quot;know&quot;)           // zwraca pozycje ostatniego znaku, -1 jeżeli nie występuje
+enter.slice(6,9)                    // usuwa od 6 do 9 znaku w stringu, ujemne wartośći ucinają od tyłu
+enter.replace(&quot;don\&#39;t&#39;&quot;, &quot;do&quot;)      // znajduje i zamienia
+enter.toUpperCase()                 // konwertuje cały string na duże litery
+enter.toLowerCase()                 // konwertuje cały string na małe litery
+enter.concat(&quot; &quot;, str2)             // enter + &quot; &quot; + str2
+enter.charAt(2)                     // zwraca znak który występuje na 2 miejscu (licznoe od 0)
+enter.charCodeAt(2)                 // zwraca kod znaku który występuje na 2 miejscu
+enter.split(&quot;,&quot;)                    // rozdziela string po każdym przecinku, zwraca array
+enter.split(&quot;&quot;)                     // rozdziela string na każdym wyrazie, zwraca array
+128.toString(16)                    // konwertuje numer do hex(16), octal(8) albo binary(2)</code></pre>
+<h3 id="liczby">Liczby</h3>
+<pre><code class="language-javascript">var pi = 3.141
+pi.toFixed(0)                   // =&gt; 3
+pi.toFixed(2)                   // =&gt; 3.14
+p.valueOf()                     // =&gt; zwraca wartość
+Number(true)                    // konwertuje do liczby (true = 1, false = 0)
+Number(new Date())              // liczba milisekund od 1970 1 stycznia 00:00
+parseInt(&quot;3 months&quot;)            // zwraca pierwszą liczbe: 3
+parseFloat(&quot;3.5 months&quot;)        // zwraca pierwszą liczbe razem po przecinku : 3.5</code></pre>
+<h3 id="tablice---arrays">Tablice - Arrays</h3>
+<pre><code class="language-javascript">var dogs = new Array(&quot;Bulldog&quot;, &quot;Beagle&quot;, &quot;Labrador&quot;)       // deklaracja
+
+dogs[0]                         // zwraca wartość na pierwszym miejscu
+dogs[0] = &quot;Bull Terier&quot;         // zmienia wartość na pierwszym miejscu
+
+for(var i = 0; i &lt; dogs.length; i++) {      // zwraca wszystkie wartości tablicy, w konsoli
+    console.log(dogs[i])                
+}
+
+dogs.toString()                         // &quot;Bulldog, Beagle, Labrador&quot;
+dogs.join (&quot; * &quot;)                       // &quot;Buldog * Beagle * Labrador&quot;
+dogs.pop()                              // usuwa ostatni element
+dogs.push(&quot;Golden Retriever&quot;)           // dodaje nowy element na końcu
+dogs[dogs.length] = &quot;Golden Retriever&quot;  // to samo co push
+dogs.shift()                            // usuwa pierwszy element
+dogs.unshift()                          // dodaje nowy element na początku
+delete dogs[0]                          // zmienia pierwszy element na undefinded (nie zalecane)
+dogs.splice(2, 0, &quot;Boxer&quot;, &quot;Pug&quot;)       // dodaje element (gdzie, jak dużo usunąć, elementy)
+var animals = dogs.concat(cats, birds)  // połączenie tablic
+dogs.slice(1,4)                         // wydobywa elementy tablicy, nie zmieniając jej
+dogs.sort()                             // sortuje tablice alfabetycznie
+dogs.reverse()                          // sortuje tablice malejąco alfabetycznie 
+
+x.sort((a, b) =&gt; {                      // sortowanie po numerach od najmniejszego do największego
+    return a - b
+})
+
+lowest = x[0]                           // najmniejsza wartość
+
+x.reverse((a, b) =&gt; {                   // sortowanie po numerach od największego do najmniejszego
+    return a - b
+})
+
+x.sort((a, b) =&gt; {                      // sortowanie po numerach od największego do najmniejszego
+    return b - a
+})
+
+highest = x[0];                         // highest item in sorted array
+
+x.sort((a, b) =&gt; {                      // randomowe sortowanie tablicy
+    return 0.5 - Math.random()
+})
+
+dogs[Math.floor(Math.random() * dogs.length)]            // randomowy element tablicy</code></pre>
+</div>
+    </div>
+
+    <div class="copyright">
+      By&nbsp;<a href="/">Mateusz Rostkowski</a>
+      &nbsp;
+      <a href="https://github.com/MateuszRostkowski/">
+        <i class="fa fa-github"></i>
+      </a>
+      &nbsp;
+      <a href="https://www.linkedin.com/in/mateusz-rostkowski/">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="og:title" content="Mateusz Rostkowski / Front-end Developer / Portfolio" />
+  <meta property="og:url" content="https://mateuszrostkowski.github.io/" />
+  <meta property="og:site_name" content="Mateusz Rostkowski / Front-end Developer / Portfolio" />
+  <meta property="og:type" content="website" />
+  <meta name="author" content="Kacper Kreft">
+  <meta name="description"
+    content="Hello my name is Mateusz Rostkowski, creating websites and web applications as well as mobile applications is my passion.">
+  <meta name="keywords" content="front-end developer, web developer, mobile developer, recat developer, html, css">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+  <title>Mateusz Rostkowski</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.jpg" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/main.css" />
+
+   <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark-reasonable.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+  <style>
+    code.hljs {
+        border-radius: 4px;
+        padding: 12px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+  </script>
+
+</head>
+
+<body style="overflow-y: hidden;">
+
+  <div class="preloader">
+    <div class="loader">
+      
+      <img src="/assets/340_loader_11.gif" alt="loader">
+    </div>
+  </div>
+
+  <div class="site-menu" id="siteMenu">
+    <a class="site-menu__link site-menu__link--first" href="https://github.com/MateuszRostkowski/">
+      <i class="fa fa-github"></i>
+    </a>
+    <a class="site-menu__link site-menu__link--second" href="https://www.linkedin.com/in/mateusz-rostkowski/">
+      <i class="fa fa-linkedin"></i>
+    </a>
+  </div>
+
+  <div class="site">
+    <div class="navbar">
+      <div class="navbar__logo"><a href="/">Mateusz Rostkowski</a></div>
+      <div class="navbar__burger" id="menuBtn">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+
+    <div class="post__container">
+      <div class="post__header">
+    <div class="wrapper">
+        <h1>Javascript Cheatsheet [część 1]</h1>
+    </div>
+</div>
+
+<div class="post__content">
+
+
+<h3 id="część-2"><a href="/blog/javascript-cheatsheet-2">Część 2</a></h3>
+<h3 id="spis-treści">Spis treści</h3>
+<ol>
+<li><a href="#podstawy">Podstawy</a></li>
+<li><a href="#stric-mode">Stric mode</a></li>
+<li><a href="#zmienne">Zmienne</a></li>
+<li><a href="#typy-danych-oraz-operator%C3%B3w">Typy danych oraz operatorów</a></li>
+<li><a href="#obiekty">Obiekty</a></li>
+<li><a href="#do-while-loop">Do while loop</a></li>
+<li><a href="#while-loop">While loop</a></li>
+<li><a href="#for-loop">For loop</a></li>
+<li><a href="#for-loop-with-break-keyword">For loop with break keyword</a></li>
+<li><a href="#for-loop-with-continue-keyword">For loop with continue keyword</a></li>
+</ol>
+<h3 id="podstawy">Podstawy</h3>
+<pre><code class="language-javascript">setTimeout(function () {
+                            // funkcja napisana tutaj będzie miała jedno sekundowe opóźnienie
+}, 1000);
+
+console.log(a);             // wyświetla tekst w konsoli
+document.write(a);          // nadpisuje cały dokument
+alert(a);                   // wyświetla jako tekst w oknie alarmu
+confirm(&quot;Really?&quot;);         // możliwość wybory tak/nie, zwraca true/false
+prompt(&quot;Your age?&quot;,&quot;0&quot;);    // możliwość wpisania wartości, drugi argument jest wartością domyślną</code></pre>
+<h3 id="stric-mode">Stric mode</h3>
+<pre><code class="language-javascript">&quot;use strict&quot;;      // Włącza tryb rygorystyczny, który zapenia bardziej bezpieczne pisanie. 
+x = 1              // Zwraca błąd ponieważ brakuje deklaracji zmiennej (var, let, const)</code></pre>
+<h3 id="zmienne">Zmienne</h3>
+<pre><code class="language-javascript">var variable;                   // zmienna
+var hello = &quot;Hello World&quot;;      // deklarowanie zmiennej jako string
+var hi = &quot;Hi&quot; + &quot; &quot; + &quot;Joe&quot;;    // = &quot;Hi Joe&quot;
+var sum = 1 + 2 + &quot;3&quot;;          // d = &quot;33&quot;
+var a = [1, 2, 3, 48];          // deklarowanie zmiennej jako tablica(array)
+var b = false;                  // boolean (true or false)
+var r = /()/;                   // Wyrażenie regularne (RegEx - regualr expresions)
+const PI = 3.14;                // stała zmienna - nie można jej zmieniać w dalszej części kodu
+const f = function() {};        // obiekt funkcji
+var first = 12,
+    second = 13,
+    third = 14;                 // deklarowanie zmiennych, może odbywać się po przecinku(dla lepszej czytelności stosuje się rozdzielanie wierszy)
+let z = &quot;zzz&quot;;                  // zmienna lokalna, zmienna ta jest deklarowana gdy będzie zmieniana w dalszej częsci kodu</code></pre>
+<h3 id="typy-danych-oraz-operatorów">Typy danych oraz operatorów</h3>
+<pre><code class="language-javascript">var age = 18;                       // Liczba
+var name = &quot;Jane&quot;                   // String
+var person = {
+    firstName: &quot;Jane&quot;,
+    lastName: &quot;Doe&quot;                 // Obiekt
+}
+var truth = false;                  // Boolean
+var sheets = [&quot;HTML&quot;, &quot;CSS&quot;, &quot;JS&quot;]  // Tablica
+var a;
+typeof a;                           // Undefined
+var empty = null                    // wartość null
+
+a &amp;&amp; b                              // operator logiczny &#39;i&#39; (and)
+a || b                              // operator loginczy &#39;albo&#39; (or)
+a == b                              // a równe b
+a != b                              // a nierówne b
+a === b                             // a ściśle równe b (porównóje również czy obie zmienne mają ten sam typ danych)
+a !=== b                            // a ściśle nie równe b
+a += b                              // a = a + b (stosowane również z: *, -, /, %)
+a++, a--                            // a = a + 1, a = a - 1</code></pre>
+<h3 id="obiekty">Obiekty</h3>
+<pre><code class="language-javascript">var student = {                                     // object name
+    firstName: &quot;Jane&quot;,                              // list of properties and values
+    lastName: &quot;Doe&quot;,
+    age: 18,
+    height: 180,
+    fullName: function(){                           //object function
+        return this.firstName + &quot; &quot; + this.lastName
+    }
+}
+
+student.age = 19;                                   // setting &quot;student&quot; object age property to 19
+student.age++;                                      // increamenting value by one
+var name = student.fullName();                      // calling object function
+
+console.log(student.age)                            // 20
+console.log(name)                                   // &quot;Jane Doe&quot;</code></pre>
+<h3 id="do-while-loop">Do while loop</h3>
+<pre><code class="language-javascript">let i = 1;
+let numbers = &quot;&quot;
+
+do {
+    i *= 2;
+    numbers += i + &quot;, &quot;
+} while (i &lt; 10)
+
+console.log(numbers) // &quot;2, 4, 8, 16, &quot;;</code></pre>
+<h3 id="while-loop">While loop</h3>
+<pre><code class="language-javascript">let i = 0;
+let numbers = &quot;&quot;
+
+while (i &lt; 10) {
+    i++;
+    numbers += i + &quot;, &quot;
+}
+
+console.log(numbers)  // &quot;1, 2, 3, 4, 5, 6, 7, 8, 9, 10, &quot;</code></pre>
+<h3 id="for-loop">For loop</h3>
+<pre><code class="language-javascript">let i = 0;
+let numbers = &quot;&quot;
+
+for (i; i &lt;= 10; i++) {
+    numbers += i + &quot;, &quot;
+}
+
+console.log(numbers)  // &quot;0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, &quot;</code></pre>
+<h3 id="for-loop-with-break-keyword">For loop with break keyword</h3>
+<pre><code class="language-javascript">let i = 0;
+let numbers = &quot;&quot;;
+
+for (i; i &lt;= 10; i++) {
+    if (i === 5) {
+        console.log(&quot;i is: &quot; + i + &quot; and loop stop here&quot;);
+        break;
+    }
+    numbers += i + &quot;, &quot;
+}
+
+console.log(numbers)  // &quot;0, 1, 2, 3, 4, &quot;</code></pre>
+<h3 id="for-loop-with-continue-keyword">For loop with continue keyword</h3>
+<pre><code class="language-javascript">let i = 0;
+let numbers = &quot;&quot;;
+
+for(i; i &lt;= 10; i++) {
+    if (i === 5) {
+        console.log(&quot;i is: &quot; + i + &quot; and loop skips when i == 5&quot;);
+        continue;
+    }
+    numbers += i + &quot;, &quot;;
+}
+
+console.log(numbers)  // &quot;0, 1, 2, 3, 4, 6, 7, 8, 9, 10, &quot;</code></pre>
+</div>
+    </div>
+
+    <div class="copyright">
+      By&nbsp;<a href="/">Mateusz Rostkowski</a>
+      &nbsp;
+      <a href="https://github.com/MateuszRostkowski/">
+        <i class="fa fa-github"></i>
+      </a>
+      &nbsp;
+      <a href="https://www.linkedin.com/in/mateusz-rostkowski/">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>
