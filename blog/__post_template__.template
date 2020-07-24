@@ -20,20 +20,20 @@
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
   <link rel="stylesheet" href="/css/main.css" />
 
-   <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark-reasonable.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark-reasonable.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
   <style>
     code.hljs {
-        border-radius: 4px;
-        padding: 12px;
+      border-radius: 4px;
+      padding: 12px;
     }
   </style>
   <script>
     document.addEventListener('DOMContentLoaded', (event) => {
-        document.querySelectorAll('pre code').forEach((block) => {
-            hljs.highlightBlock(block);
-        });
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
     });
   </script>
 
@@ -43,7 +43,6 @@
 
   <div class="preloader">
     <div class="loader">
-      
       <img src="/assets/340_loader_11.gif" alt="loader">
     </div>
   </div>
@@ -59,7 +58,9 @@
 
   <div class="site">
     <div class="navbar">
-      <div class="navbar__logo"><a href="/">Mateusz Rostkowski</a></div>
+      <div class="navbar__logo">
+        <a href="/">Mateusz Rostkowski</a>
+      </div>
       <div class="navbar__burger" id="menuBtn">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -86,5 +87,4 @@
 
   <script src="/script.js"></script>
 </body>
-
 </html>
