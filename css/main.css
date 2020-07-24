@@ -24,10 +24,10 @@
 body, button {
   background-color: var(--main-bg-color);
   font-family: 'PT Sans', sans-serif;
-  padding-bottom: 50px;
 }
 
 .copyright {
+  margin: 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,7 +517,7 @@ body, button {
 }
 
 .portfolio__container {
-  background-color: #f6f8ff;
+  background-color: #fcfcfc;
   margin: 35px 0;
   padding: 20px 0;
 }
@@ -562,6 +562,11 @@ body, button {
 #skills .skill__button--active {
   color: white;
   background: var(--hover-color);
+}
+
+.navbar__logo a {
+  color: var(--main-color);
+  text-decoration: none;
 }
 
 @media (max-width: 1100px) {
@@ -633,5 +638,38 @@ body, button {
 
 .none {
   display: none;
+}
+
+.post__container {
+  margin-top: 90px;
+}
+
+.post__container .post__header {
+  padding: 40px;
+  text-align: center;
+}
+
+.post__container .post__content {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.post__container .post__content p, .post__container .post__content ol {
+  padding: 16px 0;
+}
+
+.post__container .post__content h3 {
+  padding: 16px 0 8px;
+}
+
+.post__container .post__content li {
+  padding: 8px 0;
+  margin-left: 16px;
+}
+
+.post__container .post__content li a {
+  color: var(--main-color);
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
