@@ -26,6 +26,10 @@ body, button {
   font-family: 'PT Sans', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .copyright {
   margin: 40px 0;
   display: -webkit-box;
@@ -642,6 +646,7 @@ body, button {
 
 .post__container {
   margin-top: 90px;
+  min-height: calc(var(--vh, 1vh) * 100 - 190px);
 }
 
 .post__container .post__header {
@@ -671,5 +676,27 @@ body, button {
 .post__container .post__content li a {
   color: var(--main-color);
   text-decoration: none;
+}
+
+.blog__posts {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.blog__posts h3 {
+  text-align: center;
+}
+
+.blog__posts a {
+  margin: 8px 0;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

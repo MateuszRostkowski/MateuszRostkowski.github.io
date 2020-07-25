@@ -27,6 +27,10 @@ body, button {
   font-family: 'PT Sans', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .copyright {
   margin: 40px 0;
   display: flex;
@@ -547,6 +551,7 @@ body, button {
 
 .post__container {
   margin-top: 90px;
+  min-height: calc(var(--vh, 1vh) * 100 - 190px);
 
   .post__header {
     padding: 40px;
@@ -571,5 +576,21 @@ body, button {
         text-decoration: none;
       }
     }
+  }
+}
+
+.blog__posts {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    text-align: center;
+  }
+  a {
+    margin: 8px 0;
+    text-align: center;
   }
 }
