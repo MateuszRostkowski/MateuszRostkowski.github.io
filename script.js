@@ -1,3 +1,5 @@
+"use strict";
+
 const jsContainer = document.querySelector("#jsContainer");
 
 const data = [
@@ -200,14 +202,14 @@ setHeightVariable();
 window.addEventListener("resize", setHeightVariable);
 
 // add loader to the site
-window.addEventListener(
-  'load',                                                         // when site is fully loaded
-  () => {
-    document.body.style.overflowY = "auto"
-    const preloader = document.querySelector('.preloader')
-    preloader.classList.add('preloader-finish')                 // add class to the preloader
+
+window.addEventListener('load', // when site is fully loaded
+  function () {
+    document.body.style.overflowY = "auto";
+    var preloader = document.querySelector('.preloader');
+    preloader.classList.add('preloader-finish'); // add class to the preloader
   }
-)
+);
 
 // finding skills from data 
 
