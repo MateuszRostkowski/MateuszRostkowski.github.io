@@ -7,6 +7,7 @@ function getHtmlName(mdName) {
     const pattern = /(blog\/)([0-9]+-)(.*\.)/g
     const groups = pattern.exec(mdName)
     const fileName = groups[3].split('.').join('')
+    console.log(`<a href="./${fileName}">${fileName.split("-").join(" ")}</a>`)
     const pathToCreate = groups[1] + fileName
     if(!fs.existsSync(pathToCreate)) {
         fs.mkdirSync(pathToCreate, { recursive: true })
