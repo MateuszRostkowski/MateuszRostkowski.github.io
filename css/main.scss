@@ -549,15 +549,15 @@ a {
   display: none;
 }
 
-.post__container {
+.post {
   margin-top: 90px;
   min-height: calc(var(--vh, 1vh) * 100 - 190px);
 
-  .post__header {
-    padding: 40px;
+  &__header {
+    padding: 60px;
     text-align: center;
   }
-  .post__content {
+  &__content {
     max-width: 800px;
     width: 90%;
     margin: 0 auto;
@@ -574,6 +574,9 @@ a {
       a {
         color: var(--main-color);
         text-decoration: none;
+      }
+      .post__link {
+        color: var(--hover-color)
       }
     }
   }
