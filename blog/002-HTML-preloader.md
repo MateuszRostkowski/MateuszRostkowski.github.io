@@ -10,7 +10,8 @@ Dodanie prostego preloader'a dokładnie taki jaki widzicie na tej stronie, nie j
 
 Pokaze wam jak w kilku krokach to zrobić. 
 
-1. Przygotuj loader który będzie pasował do Twojej strony (moze to byc animowany gif lub napisany za pomocą HTML/CSS) [Przykładowe loader'y](https://loading.io/css/)
+1. Przygotuj loader który będzie pasował do Twojej strony (moze to byc animowany gif lub napisany za pomocą HTML/CSS) 
+<a href="https://loading.io/css/" class="post__link" target="_blank">Przykładowe loader'y</a>
 
 2. Otwórz plik `index.html` swojej strony i pod tagiem `<body>` dodaj swój loader.
 
