@@ -23,7 +23,7 @@ function getHtml(pathToPost) {
 }
 
 function injectToTemplate(html) {
-    const template = fs.readFileSync(path.join(__dirname, 'blog/__post_template__.template'), {
+    const template = fs.readFileSync(path.join(__dirname, 'blog/templates/__post_template__.template'), {
         encoding: 'utf-8',
     })
     return template.replace('@@CONTENT@@', html)
