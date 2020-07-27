@@ -7,7 +7,7 @@ const data = [
     name: "LiveChat",
     shortDesc: "App",
     liveDemo: "http://jsmessenger.surge.sh/",
-    githubLink: "https://github.com/MateuszRostkowski/RockPaperScissors",
+    githubLink: "https://github.com/MateuszRostkowski/messenger_javascript",
     moreInfo: "Live chat made in vanilla javascript.",
     moreInfoPhoto: "/assets/Messenger.png",
     skills: ["javascript", "html", "css", "OOP"],
@@ -77,16 +77,6 @@ const data = [
     moreInfo:
       "Weather app made with vanilla javascript. You need to allow use your location to fully use this site.",
     moreInfoPhoto: "/assets/WeatherApp.png",
-    skills: ["javascript", "html", "css"],
-  },
-  {
-    name: "RockPaperScissors",
-    shortDesc: "Game in JS",
-    liveDemo: "http://rock-paper-sizor.surge.sh/",
-    githubLink: "https://github.com/MateuszRostkowski/RockPaperScissors",
-    moreInfo:
-      "This is a simple RockPaperScissors game made in vanilla Javascript",
-    moreInfoPhoto: "/assets/RockPaper.png",
     skills: ["javascript", "html", "css"],
   },
   // {
