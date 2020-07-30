@@ -96,16 +96,32 @@
 &lt;/script&gt;</code></pre>
 <ol start="2">
 <li>W tym samym miejscu musisz dodać style które pokolorują składnie, 
-<a href="https://cdnjs.com/libraries/highlight.js/#css" class="post__link" target="_blank">więcej styli mozesz znaleźć tutaj...</a></li>
+<a href="https://cdnjs.com/libraries/highlight.js" class="post__link" target="_blank">więcej styli mozesz znaleźć tutaj...(zakładka CSS)</a></li>
 </ol>
 <pre><code class="language-HTML">&lt;link rel=&quot;stylesheet&quot;
     href=&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark-reasonable.min.css&quot;&gt;</code></pre>
 <ol start="3">
 <li>Podobnie jak style musimy jeszcze dodać język który chcemy uzywać
-<a href="https://cdnjs.com/libraries/highlight.js/#js" class="post__link" target="_blank">więcej języków tutaj...</a></li>
+<a href="https://cdnjs.com/libraries/highlight.js" class="post__link" target="_blank">więcej języków tutaj...</a></li>
 </ol>
 <pre><code class="language-HTML">&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-</div>
+<ol start="4">
+<li>Dodaj blok kodu do strony w dowolnym miejscu<pre><code class="language-HTML">&lt;pre&gt;&lt;code class=&quot;language-HTML&quot;&gt;&lt;style&gt;
+ code.hljs {
+     border-radius: 4px;
+     padding: 12px;
+ }
+&lt;/style&gt;;
+&lt;script&gt;;
+ document.addEventListener(&quot;DOMContentLoaded&quot;, (event) =&gt; {
+     document.querySelectorAll(&quot;pre code&quot;).forEach((block) =&gt; {
+         hljs.highlightBlock(block);
+     });
+ });
+&lt;/script&gt;&lt;/code&gt;&lt;/pre&gt;</code></pre>
+</div></li>
+</ol>
+
     </div>
 
     <div class="copyright">

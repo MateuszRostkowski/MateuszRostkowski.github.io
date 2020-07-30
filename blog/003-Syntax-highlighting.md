@@ -39,4 +39,21 @@
 ```HTML
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
 ```
+
+4. Dodaj blok kodu do strony w dowolnym miejscu, pamiętaj o tagu <pre> oraz <code>
+```HTML
+<pre><code class="language-HTML"><style>
+    code.hljs {
+        border-radius: 4px;
+        padding: 12px;
+    }
+</style>;
+<script>;
+    document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll("pre code").forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+    });
+</script></code></pre>
+```
 </div>
