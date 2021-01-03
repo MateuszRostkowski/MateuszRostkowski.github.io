@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
 :root {
   --main-bg-color: #ffffff;
   --main-color: rgb(0, 0, 0);
@@ -21,9 +21,10 @@
   padding: 0;
 }
 
-body, button {
+body,
+button {
   background-color: var(--main-bg-color);
-  font-family: 'PT Sans', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
@@ -67,7 +68,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  background-color: white;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -89,7 +89,7 @@ a {
   width: 40px;
   height: 5px;
   border-radius: 2.5px;
-  background-color: var(--main-color);
+  background-color: #a8a8a8;
   margin: 6px 0;
   -webkit-transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
   transition: 0.3s cubic-bezier(0.77, 0, 0.175, 1);
@@ -212,14 +212,35 @@ a {
   transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0.6s, color 0.3s cubic-bezier(0.77, 0, 0.175, 1) 0s;
 }
 
+.header__wrapper {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+  background: #282c34;
+}
+
 .header {
-  max-width: 600px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.header h1 {
+  font-size: 72px;
+  margin-bottom: 10px;
+}
+
+.header__left {
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,19 +248,22 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  height: calc(var(--vh, 1vh) * 100);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
 }
 
-.header h1 {
-  width: 80%;
-  margin-bottom: 30px;
+.header__fist {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 6px;
 }
 
-.header p {
-  width: 80%;
+.header__second {
+  font-size: 36px;
+  color: #a8a8a8;
+  font-weight: bold;
 }
 
 #jsContainer {
@@ -550,7 +574,7 @@ a {
   border: none;
   border-radius: 4px;
   font-size: 20px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 #skills .skill__button:hover {
@@ -660,7 +684,8 @@ a {
   margin: 0 auto;
 }
 
-.post__content p, .post__content ol {
+.post__content p,
+.post__content ol {
   padding: 16px 0;
 }
 
