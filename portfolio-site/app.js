@@ -2,7 +2,7 @@ function init() {
     const slide = document.querySelectorAll('.slide');
     const pages = document.querySelectorAll('.page');
     const backgrounds = [
-        'radial-gradient(1560.00px at 50% -31.44%, #08364A 0%, #2D444D 100%);',
+        'radial-gradient(1560.00px at 50% -31.44%, #08364A 0%, #2D444D 100%)',
         'radial-gradient(1267.00px at 50% -4.31%, #8E0A0A 0%, #4E3E3E 100%)',
         'radial-gradient(1267.00px at 50% -4.31%, #39342F 0%, #7A6E6E 100%)'
     ];
@@ -35,8 +35,6 @@ function init() {
         const currentRight = currentPage.querySelector('.hero .model-right')
         const nextText = nextPage.querySelector('.details');
         const portfolio = document.querySelector('.portfolio');
-
-
 
         const tl = new TimelineMax({
             onStart: function(){
@@ -89,7 +87,7 @@ function init() {
             )
             .set(
                 nextLeft,
-                {clearProps: 'all'}
+                { clearProps: 'all' }
             )
             .set(
                 nextRight,
@@ -126,7 +124,6 @@ function init() {
         }
         nextSlide(scrollSlide);
         switchDots(scrollSlide);
-        console.log(scrollSlide)
     };
 };
 

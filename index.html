@@ -4,6 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      property="og:title"
+      content="Mateusz Rostkowski / Front-end Developer / Portfolio"
+    />
+    <meta property="og:url" content="https://mateuszrostkowski.github.io/" />
+    <meta
+      property="og:site_name"
+      content="Mateusz Rostkowski / Front-end Developer / Portfolio"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="author" content="Kacper Kreft" />
+    <meta
+      name="description"
+      content="Hello my name is Mateusz Rostkowski, creating websites and web applications as well as mobile applications is my passion."
+    />
+    <meta
+      name="keywords"
+      content="front-end developer, web developer, mobile developer, recat developer, html, css"
+    />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+
     <title>Mateusz Rostkowski</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.jpg" />
     <link
@@ -12,50 +33,74 @@
       integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body style="overflow-y: hidden;">
 
+  <body style="overflow-y: hidden">
     <div class="preloader">
       <div class="loader">
-          <div class="loader-inner"></div>
+        <img src="./assets/340_loader_11.gif" alt="loader" />
       </div>
-      <h3>Loading...</h3>
     </div>
 
-    <div class="navbar">
-      <div class="navbar__logo">Mateusz Rostkowski</div>
-      <div class="navbar__burger" id="menuBtn">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-    </div>
     <div class="site-menu" id="siteMenu">
-      <div class="site-menu__icons">
+      <a
+        class="site-menu__link site-menu__link--first"
+        href="https://github.com/MateuszRostkowski/"
+      >
+        <i class="fa fa-github"></i>
+      </a>
+      <a
+        class="site-menu__link site-menu__link--second"
+        href="https://www.linkedin.com/in/mateusz-rostkowski/"
+      >
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+
+    <div class="site">
+      <div class="navbar">
+        <div class="navbar__logo"></div>
+        <div class="navbar__burger" id="menuBtn">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </div>
+
+      <div class="header__wrapper">
+        <div class="header">
+          <div class="header__left">
+            <p class="header__fist">Hello</p>
+            <h1>I'm Mateusz Rostkowski</h1>
+            <p class="header__second">
+              Front end developer <br />
+              from Poland.
+            </p>
+          </div>
+          <div class="header__right"></div>
+        </div>
+      </div>
+
+      <div class="portfolio__container">
+        <div id="skills"></div>
+        <div id="jsContainer" class="container"></div>
+      </div>
+
+      <div class="copyright">
+        By&nbsp;<a href="/">Mateusz Rostkowski</a>
+        &nbsp;
         <a href="https://github.com/MateuszRostkowski/">
           <i class="fa fa-github"></i>
         </a>
+        &nbsp;
         <a href="https://www.linkedin.com/in/mateusz-rostkowski/">
           <i class="fa fa-linkedin"></i>
         </a>
       </div>
     </div>
 
-    <div id="jsContainer" class="container"></div>
-
-    <div class="copyright">
-      By&nbsp;<a href="/">Mateusz Rostkowski</a>
-      &nbsp;
-      <a href="https://github.com/MateuszRostkowski/">
-        <i class="fa fa-github"></i>
-      </a>
-      &nbsp;
-      <a href="https://www.linkedin.com/in/mateusz-rostkowski/">
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </div>
-
     <script src="./script.js"></script>
+    <script src="./portfolio-container.js"></script>
   </body>
 </html>

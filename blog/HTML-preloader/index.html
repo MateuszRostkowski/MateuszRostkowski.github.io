@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="og:title" content="Mateusz Rostkowski / Front-end Developer / Portfolio" />
+  <meta property="og:url" content="https://mateuszrostkowski.github.io/" />
+  <meta property="og:site_name" content="Mateusz Rostkowski / Front-end Developer / Portfolio" />
+  <meta property="og:type" content="website" />
+  <meta name="author" content="Kacper Kreft">
+  <meta name="description"
+    content="Hello my name is Mateusz Rostkowski, creating websites and web applications as well as mobile applications is my passion.">
+  <meta name="keywords" content="front-end developer, web developer, mobile developer, recat developer, html, css">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+  <title>Mateusz Rostkowski</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.jpg" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/main.css" />
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark-reasonable.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+  <style>
+    code.hljs {
+      border-radius: 4px;
+      padding: 12px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightBlock(block);
+      });
+    });
+  </script>
+
+</head>
+
+<body style="overflow-y: hidden;">
+
+  <div class="preloader">
+    <div class="loader">
+      <img src="/assets/340_loader_11.gif" alt="loader">
+    </div>
+  </div>
+
+  <div class="site-menu" id="siteMenu">
+    <a class="site-menu__link site-menu__link--first" href="https://github.com/MateuszRostkowski/">
+      <i class="fa fa-github"></i>
+    </a>
+    <a class="site-menu__link site-menu__link--second" href="https://www.linkedin.com/in/mateusz-rostkowski/">
+      <i class="fa fa-linkedin"></i>
+    </a>
+  </div>
+
+  <div class="site">
+    <div class="navbar">
+      <div class="navbar__logo">
+        <a href="/">Mateusz Rostkowski</a>
+      </div>
+      <div class="navbar__burger" id="menuBtn">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+
+    <div class="post">
+      <div class="post__header">
+    <div class="wrapper">
+        <h1>HTML preloader</h1>
+    </div>
+</div>
+
+<div class="post__content">
+
+<p>Dodanie prostego preloader&#39;a dokładnie taki jaki widzicie na tej stronie, nie jest niczym skomplikowanym. </p>
+<p>Pokaze wam jak w kilku krokach to zrobić. </p>
+<ol>
+<li><p>Przygotuj loader który będzie pasował do Twojej strony (moze to byc animowany gif lub napisany za pomocą HTML/CSS) 
+<a href="https://loading.io/css/" class="post__link" target="_blank">Przykładowe loader&#39;y</a></p>
+</li>
+<li><p>Otwórz plik <code>index.html</code> swojej strony i pod tagiem <code>&lt;body&gt;</code> dodaj swój loader.</p>
+</li>
+</ol>
+<pre><code class="language-javascript">&lt;div class=&quot;preloader&quot;&gt;
+    &lt;div class=&quot;loader&quot;&gt;
+        &lt;!-- w tym miejscu trzeba dodać loader --&gt;
+        &lt;!-- moze to byc prosty gif lub napisany za pomocą css --&gt;
+        &lt;img src=&quot;/340_loader_11.gif&quot; alt=&quot;loader&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<ol start="3">
+<li>Aby loader był dobrze wypozycjonowany musimy go ostylować, poniej przykład jak mona to zrobić</li>
+</ol>
+<pre><code class="language-css">.preloader {
+  top: 0;
+  opacity: 1;
+  position: fixed;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  transition: opacity 0.3s cubic-bezier(.77, 0, .175, 1);
+  z-index: 20000;
+}
+
+
+// dodajemy style dla klasy która sprawi ze preloader nie bedzie widoczny
+.preloader-finish {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader {
+  z-index: 3;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}</code></pre>
+<ol start="4">
+<li>Musimy jeszcze dodać skrypt, który będzie ukrywać loader po załadowaniu strony. W tagu <code>&lt;head&gt;</code> swojej strony dodaj taki skrypt:</li>
+</ol>
+<pre><code class="language-javascript">window.addEventListener(&#39;load&#39;, // when site is fully loaded
+  function () {
+    document.body.style.overflowY = &quot;auto&quot;;
+    var preloader = document.querySelector(&#39;.preloader&#39;);
+    preloader.classList.add(&#39;preloader-finish&#39;); // add class to the preloader
+  }
+);</code></pre>
+</div>
+    </div>
+
+    <div class="copyright">
+      By&nbsp;<a href="/">Mateusz Rostkowski</a>
+      &nbsp;
+      <a href="https://github.com/MateuszRostkowski/">
+        <i class="fa fa-github"></i>
+      </a>
+      &nbsp;
+      <a href="https://www.linkedin.com/in/mateusz-rostkowski/">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>

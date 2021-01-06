@@ -1,0 +1,20 @@
+{
+  "name": "mateusz-rostkowski",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/MateuszRostkowski/MateuszRostkowski.github.io.git",
+  "author": "MateuszRostkowski <mateusz.rostkowsky995@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "scripts": {
+    "build": "rm -rf dist && npm run markdown && parcel build blog/index.html",
+    "start:dev": "npm run markdown && parcel index.html",
+    "markdown": "node ./markdown-to-html.js"
+  },
+  "devDependencies": {
+    "glob": "^7.1.6",
+    "glob-promise": "^3.4.0",
+    "marked": "^1.1.1",
+    "parcel": "^1.12.4"
+  }
+}
