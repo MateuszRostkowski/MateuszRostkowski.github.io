@@ -227,10 +227,10 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 80%;
+  width: 95%;
   height: 100%;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   color: white;
 }
 
@@ -251,7 +251,60 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: left;
+}
+
+.header__right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header__right .hero__row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 0;
+}
+
+.header__right .hero__row .hero__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 33.3%;
+}
+
+.header__right .hero__row .hero__element .element__paragraph {
+  padding-top: 8px;
+  color: #a8a8a8;
+  font-size: 18px;
 }
 
 .header__fist {
@@ -620,6 +673,25 @@ a {
   }
   .container {
     font-size: 11px;
+  }
+  .header {
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  .header__fist {
+    font-size: 1.5em;
+  }
+  .header__second {
+    font-size: 1.2em;
+  }
+  .header__right {
+    display: none;
+  }
+  .header__left {
+    width: 100%;
   }
 }
 
