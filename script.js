@@ -36,10 +36,10 @@ window.addEventListener(
   }
 );
 
-const navbar = document.querySelector(".navbar");
+// const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll", (e) => {
-  if (window.scrollY > window.innerHeight - 200) {
-    navbar.classList.add("navbar--shadow");
-  } else navbar.classList.remove("navbar--shadow");
-});
+// window.addEventListener("scroll", (e) => {
+//   if (window.scrollY > window.innerHeight - 200) {
+//     navbar.classList.add("navbar--shadow");
+//   } else navbar.classList.remove("navbar--shadow");
+// });
